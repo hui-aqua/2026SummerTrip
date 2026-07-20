@@ -55,6 +55,14 @@
             from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .leaflet-map-container {
+            height: 400px !important;
+            width: 100% !important;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            z-index: 10;
+        }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -255,7 +263,7 @@
             <div id="search-results-list" class="divide-y divide-slate-800"></div>
         </div>
 
-        <div id="section-cover" class="roadbook-section active-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">2026 欧洲家庭自驾旅行手册（Family Roadbook V4.0）</h1>
+        <div id="section-cover" class="roadbook-section active-section"><img src="assets/trip_banner.png" alt="Europe Family Road Trip 2026" class="w-full rounded-xl shadow-lg mb-8 border border-slate-800" /><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">2026 欧洲家庭自驾旅行手册（Family Roadbook V4.0）</h1>
 <div class="h-2"></div></div>
 <div id="section-version" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">版本历史（Version History）</h1>
 <div class="h-2"></div>
@@ -343,7 +351,7 @@
 <div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-7" class="roadbook-checkbox"  onclick="toggleCheck('chk-7')"/><label for="chk-7" class="text-slate-300 select-none cursor-pointer">常用药品（Medicines）</label></div>
 <div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-8" class="roadbook-checkbox"  onclick="toggleCheck('chk-8')"/><label for="chk-8" class="text-slate-300 select-none cursor-pointer">玩具（Toys）</label></div>
 <div class="h-2"></div></div>
-<div id="section-vehicle" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">车辆与充电策略（Vehicle）</h1>
+<div id="section-vehicle" class="roadbook-section"><img src="assets/ev_charging_illustration.png" alt="EV Charging Strategy" class="w-full rounded-xl shadow-lg my-6 border border-slate-800" /><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">车辆与充电策略（Vehicle）</h1>
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">车型信息</h2>
 <div class="h-2"></div>
@@ -377,14 +385,17 @@
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">抵达时间（Arrival）</strong>：11:15</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">开始检票（Check-in）</strong>：07:00</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">乘员</strong>：2 Adults + 1 Child</li>
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">车型配置</strong>：Passenger Car（≤5m）\n- <strong class="text-white font-semibold">车牌号码（Registration）</strong>：EH79780\n- <strong class="text-white font-semibold">预订编号（Booking Reference）</strong>：WXM7982</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">车型配置</strong>：Passenger Car（≤5m）</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">车牌号码（Registration）</strong>：EH79780</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">预订编号（Booking Reference）</strong>：WXM7982</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">PDF门票</strong>：<a href="assets/WXM7982-Travel Confirmation_1781638264199.pdf" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">点击查看 Color Line 预订确认 PDF 门票</a></li>
 </ul>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">去程待办事项（TODO）</h3>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-1" class="roadbook-checkbox"  onclick="toggleCheck('chk-1')"/><label for="chk-1" class="text-slate-300 select-none cursor-pointer">登船流程</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2" class="roadbook-checkbox"  onclick="toggleCheck('chk-2')"/><label for="chk-2" class="text-slate-300 select-none cursor-pointer">船上早餐建议</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-3" class="roadbook-checkbox"  onclick="toggleCheck('chk-3')"/><label for="chk-3" class="text-slate-300 select-none cursor-pointer">儿童活动区位置</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-4" class="roadbook-checkbox"  onclick="toggleCheck('chk-4')"/><label for="chk-4" class="text-slate-300 select-none cursor-pointer">最佳观景位置</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-1" class="roadbook-checkbox" checked onclick="toggleCheck('chk-1')"/><label for="chk-1" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">登船流程</strong>：提前60分钟（07:00前）抵达 Kristiansand 码头进行 Check-in。顺着指示牌排队安检，扫描条形码换取登船牌。将车停入指定的汽车甲板层，熄火、拉紧手刹、挂入档位。随身携带随行婴儿用品，进入乘客区。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2" class="roadbook-checkbox" checked onclick="toggleCheck('chk-2')"/><label for="chk-2" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上早餐建议</strong>：预订了自助早餐可在 SuperSpeed 1 餐厅享用，或者在甲板上的 Catch Me If You Can 咖啡厅购买三明治与咖啡。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-3" class="roadbook-checkbox" checked onclick="toggleCheck('chk-3')"/><label for="chk-3" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">儿童活动区位置</strong>：船上有专门的儿童活动室（Playroom），配有玩具和播放卡通片的电视，适合Noora玩耍。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-4" class="roadbook-checkbox" checked onclick="toggleCheck('chk-4')"/><label for="chk-4" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">最佳观景位置</strong>：7层和8层的船尾观景甲板，或前侧全景沙龙。</label></div>
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
@@ -395,7 +406,10 @@
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">起航时间（Departure）</strong>：2026-08-03 09:45</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">抵达时间（Arrival）</strong>：12:10</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">开始检票（Check-in）</strong>：08:45</li>
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">特殊服务</strong>：已预订船上 EV 充电（EV Charging Booked）\n- <strong class="text-white font-semibold">车牌号码（Registration）</strong>：EH79780\n- <strong class="text-white font-semibold">预订编号（Booking Reference）</strong>：13080265</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">特殊服务</strong>：已预订船上 EV 充电（EV Charging Booked）</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">车牌号码（Registration）</strong>：EH79780</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">预订编号（Booking Reference）</strong>：13080265</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">PDF门票</strong>：<a href="assets/13080265.pdf" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">点击查看 Fjord Line 预订确认 PDF 门票</a></li>
 </ul>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">回程待办事项（TODO）</h3>
@@ -2414,10 +2428,16 @@
             if (activeSec) {
                 activeSec.classList.add('active-section');
                 
-                // If it is a daily section, initialize leafet map
+                // If it is a daily section, initialize or invalidate leaflet map
                 const dayAttr = activeSec.getAttribute('data-day');
                 if (dayAttr) {
-                    initMapForDay(dayAttr);
+                    setTimeout(() => {
+                        if (!activeMaps[dayAttr]) {
+                            initMapForDay(dayAttr);
+                        } else {
+                            activeMaps[dayAttr].invalidateSize();
+                        }
+                    }, 100);
                 }
             }
             
@@ -2502,7 +2522,7 @@
         
         // Search Content
         window.searchContent = function() {
-            const query = document.getElementById('search-input').value.toLowerCase().strip();
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
             const resultsSection = document.getElementById('search-results-section');
             const resultsList = document.getElementById('search-results-list');
             

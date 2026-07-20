@@ -202,6 +202,7 @@ def build_roadbook_site():
     cover_path = os.path.join(docs_dir, "00_Cover.md")
     with open(cover_path, 'r', encoding='utf-8') as f:
         cover_content = parse_markdown(f.read())
+    cover_content = '<img src="assets/trip_banner.png" alt="Europe Family Road Trip 2026" class="w-full rounded-xl shadow-lg mb-8 border border-slate-800" />' + cover_content
     content_html.append(f'<div id="section-cover" class="roadbook-section active-section">{cover_content}</div>')
     sidebar_html.append('<a href="#cover" class="nav-item active" onclick="showSection(\'cover\')">✨ 封面 (Cover)</a>')
     
@@ -230,6 +231,7 @@ def build_roadbook_site():
     vehicle_path = os.path.join(docs_dir, "05_Vehicle.md")
     with open(vehicle_path, 'r', encoding='utf-8') as f:
         vehicle_content = parse_markdown(f.read())
+    vehicle_content = '<img src="assets/ev_charging_illustration.png" alt="EV Charging Strategy" class="w-full rounded-xl shadow-lg my-6 border border-slate-800" />' + vehicle_content
     content_html.append(f'<div id="section-vehicle" class="roadbook-section">{vehicle_content}</div>')
     sidebar_html.append('<a href="#vehicle" class="nav-item" onclick="showSection(\'vehicle\')">⚡ 车辆与充电 (Vehicle)</a>')
     
@@ -349,6 +351,14 @@ def build_roadbook_site():
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .leaflet-map-container {
+            height: 400px !important;
+            width: 100% !important;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            z-index: 10;
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -624,10 +634,16 @@ def build_roadbook_site():
             if (activeSec) {
                 activeSec.classList.add('active-section');
                 
-                // If it is a daily section, initialize leafet map
+                // If it is a daily section, initialize or invalidate leaflet map
                 const dayAttr = activeSec.getAttribute('data-day');
                 if (dayAttr) {
-                    initMapForDay(dayAttr);
+                    setTimeout(() => {
+                        if (!activeMaps[dayAttr]) {
+                            initMapForDay(dayAttr);
+                        } else {
+                            activeMaps[dayAttr].invalidateSize();
+                        }
+                    }, 100);
                 }
             }
             
@@ -712,7 +728,7 @@ def build_roadbook_site():
         
         // Search Content
         window.searchContent = function() {
-            const query = document.getElementById('search-input').value.toLowerCase().strip();
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
             const resultsSection = document.getElementById('search-results-section');
             const resultsList = document.getElementById('search-results-list');
             
