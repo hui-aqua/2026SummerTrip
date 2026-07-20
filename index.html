@@ -195,11 +195,14 @@
     <!-- Mobile Header -->
     <header class="no-print md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center z-50 sticky top-0">
         <span class="text-white font-bold title-font text-lg">🚗 Family Roadbook 2026</span>
-        <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
+        <div class="flex items-center gap-3">
+            <span id="mobile-sync-dot" class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
     </header>
 
     <!-- Sidebar Navigation -->
@@ -207,6 +210,10 @@
         <div class="mb-6 px-3">
             <h1 class="text-white font-bold text-lg title-font">Family Roadbook 2026</h1>
             <p class="text-slate-500 text-xs mt-1">2024 Hyundai Kona EV Europe自驾手册</p>
+            <div class="flex items-center gap-2 mt-2 px-3 py-1 bg-slate-950/40 rounded border border-slate-800/60 text-xs">
+                <span id="sync-dot" class="w-2.5 h-2.5 rounded-full bg-yellow-500 animate-pulse"></span>
+                <span id="sync-status" class="text-slate-400">正在初始化同步...</span>
+            </div>
         </div>
         
         <!-- Search bar -->
@@ -342,14 +349,14 @@
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">随车日常物品清单</h2>
 <div class="h-2"></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-1" class="roadbook-checkbox"  onclick="toggleCheck('chk-1')"/><label for="chk-1" class="text-slate-300 select-none cursor-pointer">纸尿裤（Diapers）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2" class="roadbook-checkbox"  onclick="toggleCheck('chk-2')"/><label for="chk-2" class="text-slate-300 select-none cursor-pointer">湿巾（Wipes）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-3" class="roadbook-checkbox"  onclick="toggleCheck('chk-3')"/><label for="chk-3" class="text-slate-300 select-none cursor-pointer">奶粉/奶盒（Milk）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-4" class="roadbook-checkbox"  onclick="toggleCheck('chk-4')"/><label for="chk-4" class="text-slate-300 select-none cursor-pointer">零食（Snacks）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-5" class="roadbook-checkbox"  onclick="toggleCheck('chk-5')"/><label for="chk-5" class="text-slate-300 select-none cursor-pointer">水（Water）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-6" class="roadbook-checkbox"  onclick="toggleCheck('chk-6')"/><label for="chk-6" class="text-slate-300 select-none cursor-pointer">备用衣服（Clothes）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-7" class="roadbook-checkbox"  onclick="toggleCheck('chk-7')"/><label for="chk-7" class="text-slate-300 select-none cursor-pointer">常用药品（Medicines）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-8" class="roadbook-checkbox"  onclick="toggleCheck('chk-8')"/><label for="chk-8" class="text-slate-300 select-none cursor-pointer">玩具（Toys）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2127bf7480" class="roadbook-checkbox"  onclick="toggleCheck('chk-2127bf7480')"/><label for="chk-2127bf7480" class="text-slate-300 select-none cursor-pointer">纸尿裤（Diapers）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-11b5357272" class="roadbook-checkbox"  onclick="toggleCheck('chk-11b5357272')"/><label for="chk-11b5357272" class="text-slate-300 select-none cursor-pointer">湿巾（Wipes）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-8098e899be" class="roadbook-checkbox"  onclick="toggleCheck('chk-8098e899be')"/><label for="chk-8098e899be" class="text-slate-300 select-none cursor-pointer">奶粉/奶盒（Milk）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-16afa1d945" class="roadbook-checkbox"  onclick="toggleCheck('chk-16afa1d945')"/><label for="chk-16afa1d945" class="text-slate-300 select-none cursor-pointer">零食（Snacks）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-c7dee029eb" class="roadbook-checkbox"  onclick="toggleCheck('chk-c7dee029eb')"/><label for="chk-c7dee029eb" class="text-slate-300 select-none cursor-pointer">水（Water）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-fb5dfc3a6c" class="roadbook-checkbox"  onclick="toggleCheck('chk-fb5dfc3a6c')"/><label for="chk-fb5dfc3a6c" class="text-slate-300 select-none cursor-pointer">备用衣服（Clothes）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-1163d26148" class="roadbook-checkbox"  onclick="toggleCheck('chk-1163d26148')"/><label for="chk-1163d26148" class="text-slate-300 select-none cursor-pointer">常用药品（Medicines）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-7f682634fe" class="roadbook-checkbox"  onclick="toggleCheck('chk-7f682634fe')"/><label for="chk-7f682634fe" class="text-slate-300 select-none cursor-pointer">玩具（Toys）</label></div>
 <div class="h-2"></div></div>
 <div id="section-vehicle" class="roadbook-section"><img src="assets/ev_charging_illustration.png" alt="EV Charging Strategy" class="w-full rounded-xl shadow-lg my-6 border border-slate-800" /><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">车辆与充电策略（Vehicle）</h1>
 <div class="h-2"></div>
@@ -392,10 +399,10 @@
 </ul>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">去程待办事项（TODO）</h3>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-1" class="roadbook-checkbox" checked onclick="toggleCheck('chk-1')"/><label for="chk-1" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">登船流程</strong>：提前60分钟（07:00前）抵达 Kristiansand 码头进行 Check-in。顺着指示牌排队安检，扫描条形码换取登船牌。将车停入指定的汽车甲板层，熄火、拉紧手刹、挂入档位。随身携带随行婴儿用品，进入乘客区。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2" class="roadbook-checkbox" checked onclick="toggleCheck('chk-2')"/><label for="chk-2" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上早餐建议</strong>：预订了自助早餐可在 SuperSpeed 1 餐厅享用，或者在甲板上的 Catch Me If You Can 咖啡厅购买三明治与咖啡。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-3" class="roadbook-checkbox" checked onclick="toggleCheck('chk-3')"/><label for="chk-3" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">儿童活动区位置</strong>：船上有专门的儿童活动室（Playroom），配有玩具和播放卡通片的电视，适合Noora玩耍。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-4" class="roadbook-checkbox" checked onclick="toggleCheck('chk-4')"/><label for="chk-4" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">最佳观景位置</strong>：7层和8层的船尾观景甲板，或前侧全景沙龙。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-b1aec303ff" class="roadbook-checkbox" checked onclick="toggleCheck('chk-b1aec303ff')"/><label for="chk-b1aec303ff" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">登船流程</strong>：提前60分钟（07:00前）抵达 Kristiansand 码头进行 Check-in。顺着指示牌排队安检，扫描条形码换取登船牌。将车停入指定的汽车甲板层，熄火、拉紧手刹、挂入档位。随身携带随行婴儿用品，进入乘客区。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-e8c77bfd18" class="roadbook-checkbox" checked onclick="toggleCheck('chk-e8c77bfd18')"/><label for="chk-e8c77bfd18" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上早餐建议</strong>：预订了自助早餐可在 SuperSpeed 1 餐厅享用，或者在甲板上的 Catch Me If You Can 咖啡厅购买三明治与咖啡。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-f92bc241f7" class="roadbook-checkbox" checked onclick="toggleCheck('chk-f92bc241f7')"/><label for="chk-f92bc241f7" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">儿童活动区位置</strong>：船上有专门的儿童活动室（Playroom），配有玩具和播放卡通片的电视，适合Noora玩耍。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-d5708831c9" class="roadbook-checkbox" checked onclick="toggleCheck('chk-d5708831c9')"/><label for="chk-d5708831c9" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">最佳观景位置</strong>：7层和8层的船尾观景甲板，或前侧全景沙龙。</label></div>
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
@@ -413,8 +420,8 @@
 </ul>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">回程待办事项（TODO）</h3>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-5" class="roadbook-checkbox" checked onclick="toggleCheck('chk-5')"/><label for="chk-5" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上充电具体流程</strong>：回程乘坐 HSC Fjord FSTR（双体快速轮渡），已预订船上 EV 充电。登船时主动向工作人员出示“Ladepunkt el-bil”预订凭证，车辆将被引导至有充电插座的甲板车位。自备 Type2 充电线连接充电桩，船员会统一通电进行充电。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-6" class="roadbook-checkbox" checked onclick="toggleCheck('chk-6')"/><label for="chk-6" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">下船路线及注意事项</strong>：抵达 Kristiansand 后，听从广播指示返回汽车甲板。解开充电线并收纳好，等待前方车辆驶出后顺次下船。下船后直接进入 E39 高速返回 Stavanger。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-c1a5d22b2b" class="roadbook-checkbox" checked onclick="toggleCheck('chk-c1a5d22b2b')"/><label for="chk-c1a5d22b2b" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上充电具体流程</strong>：回程乘坐 HSC Fjord FSTR（双体快速轮渡），已预订船上 EV 充电。登船时主动向工作人员出示“Ladepunkt el-bil”预订凭证，车辆将被引导至有充电插座的甲板车位。自备 Type2 充电线连接充电桩，船员会统一通电进行充电。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-174679319a" class="roadbook-checkbox" checked onclick="toggleCheck('chk-174679319a')"/><label for="chk-174679319a" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">下船路线及注意事项</strong>：抵达 Kristiansand 后，听从广播指示返回汽车甲板。解开充电线并收纳好，等待前方车辆驶出后顺次下船。下船后直接进入 E39 高速返回 Stavanger。</label></div>
 <div class="h-2"></div></div>
 <div id="section-hotels" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">住宿信息（Hotels）</h1>
 <div class="h-2"></div>
@@ -2255,28 +2262,47 @@
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">证件及重要材料（Documents）</h2>
 <div class="h-2"></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-1" class="roadbook-checkbox"  onclick="toggleCheck('chk-1')"/><label for="chk-1" class="text-slate-300 select-none cursor-pointer">护照（Passport）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2" class="roadbook-checkbox"  onclick="toggleCheck('chk-2')"/><label for="chk-2" class="text-slate-300 select-none cursor-pointer">驾照/翻译件（Driver License）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-3" class="roadbook-checkbox"  onclick="toggleCheck('chk-3')"/><label for="chk-3" class="text-slate-300 select-none cursor-pointer">会议入场材料（Conference Materials）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-09f65cf355" class="roadbook-checkbox"  onclick="toggleCheck('chk-09f65cf355')"/><label for="chk-09f65cf355" class="text-slate-300 select-none cursor-pointer">护照（Passport）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-aeed6dfe39" class="roadbook-checkbox"  onclick="toggleCheck('chk-aeed6dfe39')"/><label for="chk-aeed6dfe39" class="text-slate-300 select-none cursor-pointer">驾照/翻译件（Driver License）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-b3330038ef" class="roadbook-checkbox"  onclick="toggleCheck('chk-b3330038ef')"/><label for="chk-b3330038ef" class="text-slate-300 select-none cursor-pointer">会议入场材料（Conference Materials）</label></div>
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Kona EV 充电装备</h2>
 <div class="h-2"></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-4" class="roadbook-checkbox"  onclick="toggleCheck('chk-4')"/><label for="chk-4" class="text-slate-300 select-none cursor-pointer">Type2 充电线（Type2 Cable）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-5" class="roadbook-checkbox"  onclick="toggleCheck('chk-5')"/><label for="chk-5" class="text-slate-300 select-none cursor-pointer">充电实体卡/App准备（Charging Card）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-b250c45f4a" class="roadbook-checkbox"  onclick="toggleCheck('chk-b250c45f4a')"/><label for="chk-b250c45f4a" class="text-slate-300 select-none cursor-pointer">Type2 充电线（Type2 Cable）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-52d440575e" class="roadbook-checkbox"  onclick="toggleCheck('chk-52d440575e')"/><label for="chk-52d440575e" class="text-slate-300 select-none cursor-pointer">充电实体卡/App准备（Charging Card）</label></div>
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Noora 婴童用品（Baby Items）</h2>
 <div class="h-2"></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-6" class="roadbook-checkbox"  onclick="toggleCheck('chk-6')"/><label for="chk-6" class="text-slate-300 select-none cursor-pointer">奶瓶/奶粉/辅食（Baby Bottle / Baby Items）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-7" class="roadbook-checkbox"  onclick="toggleCheck('chk-7')"/><label for="chk-7" class="text-slate-300 select-none cursor-pointer">随身药包（Baby Medicines）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-8" class="roadbook-checkbox"  onclick="toggleCheck('chk-8')"/><label for="chk-8" class="text-slate-300 select-none cursor-pointer">纸尿裤/湿巾</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-9" class="roadbook-checkbox"  onclick="toggleCheck('chk-9')"/><label for="chk-9" class="text-slate-300 select-none cursor-pointer">安全座椅</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-ff956494b1" class="roadbook-checkbox"  onclick="toggleCheck('chk-ff956494b1')"/><label for="chk-ff956494b1" class="text-slate-300 select-none cursor-pointer">奶瓶/奶粉/辅食（Baby Bottle / Baby Items）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-50129ce938" class="roadbook-checkbox"  onclick="toggleCheck('chk-50129ce938')"/><label for="chk-50129ce938" class="text-slate-300 select-none cursor-pointer">随身药包（Baby Medicines）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-4a3e2be679" class="roadbook-checkbox"  onclick="toggleCheck('chk-4a3e2be679')"/><label for="chk-4a3e2be679" class="text-slate-300 select-none cursor-pointer">纸尿裤/湿巾</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-39b0aaa596" class="roadbook-checkbox"  onclick="toggleCheck('chk-39b0aaa596')"/><label for="chk-39b0aaa596" class="text-slate-300 select-none cursor-pointer">安全座椅</label></div>
+<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">生活与食品类（Household &amp; Food）</h2>
+<div class="h-2"></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-c37c2fc80a" class="roadbook-checkbox"  onclick="toggleCheck('chk-c37c2fc80a')"/><label for="chk-c37c2fc80a" class="text-slate-300 select-none cursor-pointer">大米（Rice）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-c4796e7465" class="roadbook-checkbox"  onclick="toggleCheck('chk-c4796e7465')"/><label for="chk-c4796e7465" class="text-slate-300 select-none cursor-pointer">电饭煲（Rice Cooker）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-2373f0f61b" class="roadbook-checkbox"  onclick="toggleCheck('chk-2373f0f61b')"/><label for="chk-2373f0f61b" class="text-slate-300 select-none cursor-pointer">新鲜水果（Fruit）</label></div>
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">电子设备（Electronics）</h2>
 <div class="h-2"></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-10" class="roadbook-checkbox"  onclick="toggleCheck('chk-10')"/><label for="chk-10" class="text-slate-300 select-none cursor-pointer">相机（Camera）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-11" class="roadbook-checkbox"  onclick="toggleCheck('chk-11')"/><label for="chk-11" class="text-slate-300 select-none cursor-pointer">笔记本电脑（Laptop）</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-12" class="roadbook-checkbox"  onclick="toggleCheck('chk-12')"/><label for="chk-12" class="text-slate-300 select-none cursor-pointer">各种充电器及插头转换器</label></div>
-<div class="h-2"></div></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-12bd787561" class="roadbook-checkbox"  onclick="toggleCheck('chk-12bd787561')"/><label for="chk-12bd787561" class="text-slate-300 select-none cursor-pointer">相机（Camera）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-cde305784a" class="roadbook-checkbox"  onclick="toggleCheck('chk-cde305784a')"/><label for="chk-cde305784a" class="text-slate-300 select-none cursor-pointer">笔记本电脑（Laptop）</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-362ab6c9bc" class="roadbook-checkbox"  onclick="toggleCheck('chk-362ab6c9bc')"/><label for="chk-362ab6c9bc" class="text-slate-300 select-none cursor-pointer">各种充电器及插头转换器</label></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">➕ 自定义行李 (Custom Packing Items)</h2>
+<div class="bg-slate-900/40 p-4 rounded-lg border border-slate-800 my-4">
+    <p class="text-xs text-slate-400 mb-3">你可以在这里添加自定义行李项目，所有添加的项目和勾选状态将实时与妻子的手机同步。</p>
+    <div class="flex gap-2 mb-4">
+        <input type="text" id="custom-item-input" placeholder="输入行李名称 (如: 遮阳帽)..." class="flex-grow bg-slate-950 border border-slate-800 rounded px-3 py-1.5 text-sm text-slate-300 focus:outline-none focus:border-cyan-500" onkeypress="if(event.key==='Enter')addCustomItem()"/>
+        <button onclick="addCustomItem()" class="px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded text-sm transition font-semibold">添加</button>
+    </div>
+    <div id="custom-items-container" class="divide-y divide-slate-800/40">
+        <!-- Custom items will be injected here -->
+    </div>
+</div>
+</div>
 <div id="section-emergency" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">应急信息（Emergency Contacts）</h1>
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">医疗协助（Hospital）</h2>
@@ -2457,48 +2483,138 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Load checklists state from localStorage on startup
-        document.addEventListener('DOMContentLoaded', () => {
-            const chks = JSON.parse(localStorage.getItem('roadbook_checklists') || '{}');
-            Object.keys(chks).forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.checked = chks[id];
-                    // Also strikeout/update labels
-                    const label = document.querySelector(`label[for="${id}"]`);
-                    if (label) {
-                        if (chks[id]) {
-                            label.style.textDecoration = 'line-through';
-                            label.style.color = '#64748b';
-                        } else {
-                            label.style.textDecoration = 'none';
-                            label.style.color = '#cbd5e1';
-                        }
-                    }
-                }
-            });
-            
-            // If location hash exists, show that section
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
-            }
-        });
+        // Cloud sync URL for the roadbook state
+        const SYNC_URL = 'https://kvdb.io/hui_noora_roadbook_2026/roadbook_state';
+        let state = {
+            checklists: {},
+            customItems: []
+        };
+        let isSyncing = false;
 
-        // Toggle checkbox state & save to localStorage
+        // Update UI status indicator
+        function updateSyncStatus(status, color) {
+            const dot = document.getElementById('sync-dot');
+            const txt = document.getElementById('sync-status');
+            const mDot = document.getElementById('mobile-sync-dot');
+            
+            if (dot) dot.style.backgroundColor = color;
+            if (mDot) mDot.style.backgroundColor = color;
+            if (txt) txt.innerText = status;
+        }
+
+        // Fetch state from cloud
+        async function fetchState() {
+            if (isSyncing) return;
+            try {
+                const res = await fetch(SYNC_URL);
+                if (res.ok) {
+                    const remoteState = await res.json();
+                    mergeState(remoteState);
+                    updateSyncStatus('已同步 (Synced)', '#10b981'); // Green
+                } else if (res.status === 404) {
+                    // Not created yet, push current local state to cloud
+                    await pushState();
+                } else {
+                    updateSyncStatus('同步异常 (Sync Error)', '#ef4444'); // Red
+                }
+            } catch (e) {
+                console.error("Fetch sync error:", e);
+                updateSyncStatus('离线运行 (Offline)', '#f59e0b'); // Orange
+            }
+        }
+
+        // Merge remote state into local state
+        function mergeState(remote) {
+            if (!remote) return;
+            // Merge checklists
+            if (remote.checklists) {
+                Object.keys(remote.checklists).forEach(id => {
+                    state.checklists[id] = remote.checklists[id];
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.checked = remote.checklists[id];
+                        updateLabelStyle(id, el.checked);
+                    }
+                });
+            }
+            
+            // Merge custom items
+            if (remote.customItems) {
+                state.customItems = remote.customItems;
+                renderCustomItems();
+            }
+            
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+        }
+
+        // Push state to cloud
+        async function pushState() {
+            isSyncing = true;
+            updateSyncStatus('正在同步 (Syncing...)', '#eab308'); // Yellow
+            try {
+                const res = await fetch(SYNC_URL, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(state)
+                });
+                if (res.ok) {
+                    updateSyncStatus('已同步 (Synced)', '#10b981'); // Green
+                } else {
+                    updateSyncStatus('同步错误 (Sync Error)', '#ef4444'); // Red
+                }
+            } catch (e) {
+                console.error("Push sync error:", e);
+                updateSyncStatus('保存本地 (Local)', '#f59e0b'); // Orange
+            } finally {
+                isSyncing = false;
+            }
+        }
+
+        // Render custom items in UI
+        function renderCustomItems() {
+            const container = document.getElementById('custom-items-container');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            if (state.customItems.length === 0) {
+                container.innerHTML = '<p class="text-xs text-slate-500 py-3">没有自定义行李项目...</p>';
+                return;
+            }
+            
+            state.customItems.forEach((item, index) => {
+                const id = `custom-chk-${index}`;
+                const checked = item.checked ? 'checked' : '';
+                const style = item.checked ? 'text-decoration: line-through; color: #64748b;' : 'color: #cbd5e1;';
+                
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'flex items-center justify-between py-2 border-b border-slate-800/40';
+                itemDiv.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="${id}" class="roadbook-checkbox" ${checked} onclick="toggleCustomCheck(${index})"/>
+                        <label for="${id}" class="text-sm select-none cursor-pointer" style="${style}">${item.name}</label>
+                    </div>
+                    <button onclick="removeCustomItem(${index})" class="text-xs text-red-400 hover:text-red-300 font-semibold px-2 py-0.5 rounded hover:bg-red-500/10 transition">删除</button>
+                `;
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Toggle standard check
         window.toggleCheck = function(id) {
             const el = document.getElementById(id);
             if (!el) return;
-            const checked = el.checked;
+            state.checklists[id] = el.checked;
+            updateLabelStyle(id, el.checked);
             
-            const chks = JSON.parse(localStorage.getItem('roadbook_checklists') || '{}');
-            chks[id] = checked;
-            localStorage.setItem('roadbook_checklists', JSON.stringify(chks));
-            
-            // Update label styling
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
+        };
+
+        // Helper to update label style
+        function updateLabelStyle(id, isChecked) {
             const label = document.querySelector(`label[for="${id}"]`);
             if (label) {
-                if (checked) {
+                if (isChecked) {
                     label.style.textDecoration = 'line-through';
                     label.style.color = '#64748b';
                 } else {
@@ -2506,7 +2622,65 @@
                     label.style.color = '#cbd5e1';
                 }
             }
+        }
+
+        // Add custom item
+        window.addCustomItem = function() {
+            const input = document.getElementById('custom-item-input');
+            if (!input) return;
+            const name = input.value.trim();
+            if (!name) return;
+            
+            state.customItems.push({ name: name, checked: false });
+            input.value = '';
+            
+            renderCustomItems();
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
         };
+
+        // Toggle custom check
+        window.toggleCustomCheck = function(index) {
+            if (index < 0 || index >= state.customItems.length) return;
+            state.customItems[index].checked = !state.customItems[index].checked;
+            
+            renderCustomItems();
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
+        };
+
+        // Remove custom item
+        window.removeCustomItem = function(index) {
+            if (index < 0 || index >= state.customItems.length) return;
+            state.customItems.splice(index, 1);
+            
+            renderCustomItems();
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
+        };
+
+        // Load checklists state on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load local backup first
+            const localBackup = localStorage.getItem('roadbook_state');
+            if (localBackup) {
+                state = JSON.parse(localBackup);
+                if (state.checklists) {
+                    Object.keys(state.checklists).forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) {
+                            el.checked = state.checklists[id];
+                            updateLabelStyle(id, el.checked);
+                        }
+                    });
+                }
+                renderCustomItems();
+            }
+            
+            // Connect to Cloud Sync
+            fetchState();
+            setInterval(fetchState, 15000); // Poll every 15 seconds
+        });
 
         // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', () => {

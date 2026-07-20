@@ -83,12 +83,14 @@ def parse_markdown(text):
     text = re.sub(r"^---$", r'<hr class="my-6 border-slate-800" />', text, flags=re.MULTILINE)
     
     # 5. Checkboxes (with persistent class)
-    checkbox_counter = [0]
+    import hashlib
     def make_checkbox(match):
-        checkbox_counter[0] += 1
         checked = 'checked' if match.group(1) == 'x' else ''
         label = match.group(2).strip()
-        id_str = f"chk-{checkbox_counter[0]}"
+        # Create a unique ID based on the clean alphanumeric text label hash
+        label_clean = re.sub(r'<.*?>', '', label) # strip HTML
+        label_clean = re.sub(r'[^a-zA-Z0-9\u4e00-\u9fa5]', '', label_clean) # alphanumeric & Chinese
+        id_str = "chk-" + hashlib.md5(label_clean.encode('utf-8')).hexdigest()[:10]
         return f'<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="{id_str}" class="roadbook-checkbox" {checked} onclick="toggleCheck(\'{id_str}\')"/><label for="{id_str}" class="text-slate-300 select-none cursor-pointer">{label}</label></div>'
         
     text = re.sub(r"^-\s*\[([ x])\]\s*(.*?)$", make_checkbox, text, flags=re.MULTILINE)
@@ -282,6 +284,21 @@ def build_roadbook_site():
         if os.path.exists(file_path):
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = parse_markdown(f.read())
+            if key == "packing":
+                custom_ui = """
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">➕ 自定义行李 (Custom Packing Items)</h2>
+<div class="bg-slate-900/40 p-4 rounded-lg border border-slate-800 my-4">
+    <p class="text-xs text-slate-400 mb-3">你可以在这里添加自定义行李项目，所有添加的项目和勾选状态将实时与妻子的手机同步。</p>
+    <div class="flex gap-2 mb-4">
+        <input type="text" id="custom-item-input" placeholder="输入行李名称 (如: 遮阳帽)..." class="flex-grow bg-slate-950 border border-slate-800 rounded px-3 py-1.5 text-sm text-slate-300 focus:outline-none focus:border-cyan-500" onkeypress="if(event.key==='Enter')addCustomItem()"/>
+        <button onclick="addCustomItem()" class="px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded text-sm transition font-semibold">添加</button>
+    </div>
+    <div id="custom-items-container" class="divide-y divide-slate-800/40">
+        <!-- Custom items will be injected here -->
+    </div>
+</div>
+"""
+                content += custom_ui
             content_html.append(f'<div id="section-{key}" class="roadbook-section">{content}</div>')
             # Choose icon
             icon = "⚙️"
@@ -492,11 +509,14 @@ def build_roadbook_site():
     <!-- Mobile Header -->
     <header class="no-print md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center z-50 sticky top-0">
         <span class="text-white font-bold title-font text-lg">🚗 Family Roadbook 2026</span>
-        <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
+        <div class="flex items-center gap-3">
+            <span id="mobile-sync-dot" class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
     </header>
 
     <!-- Sidebar Navigation -->
@@ -504,6 +524,10 @@ def build_roadbook_site():
         <div class="mb-6 px-3">
             <h1 class="text-white font-bold text-lg title-font">Family Roadbook 2026</h1>
             <p class="text-slate-500 text-xs mt-1">2024 Hyundai Kona EV Europe自驾手册</p>
+            <div class="flex items-center gap-2 mt-2 px-3 py-1 bg-slate-950/40 rounded border border-slate-800/60 text-xs">
+                <span id="sync-dot" class="w-2.5 h-2.5 rounded-full bg-yellow-500 animate-pulse"></span>
+                <span id="sync-status" class="text-slate-400">正在初始化同步...</span>
+            </div>
         </div>
         
         <!-- Search bar -->
@@ -663,48 +687,138 @@ def build_roadbook_site():
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Load checklists state from localStorage on startup
-        document.addEventListener('DOMContentLoaded', () => {
-            const chks = JSON.parse(localStorage.getItem('roadbook_checklists') || '{}');
-            Object.keys(chks).forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.checked = chks[id];
-                    // Also strikeout/update labels
-                    const label = document.querySelector(`label[for="${id}"]`);
-                    if (label) {
-                        if (chks[id]) {
-                            label.style.textDecoration = 'line-through';
-                            label.style.color = '#64748b';
-                        } else {
-                            label.style.textDecoration = 'none';
-                            label.style.color = '#cbd5e1';
-                        }
-                    }
-                }
-            });
-            
-            // If location hash exists, show that section
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
-            }
-        });
+        // Cloud sync URL for the roadbook state
+        const SYNC_URL = 'https://kvdb.io/hui_noora_roadbook_2026/roadbook_state';
+        let state = {
+            checklists: {},
+            customItems: []
+        };
+        let isSyncing = false;
 
-        // Toggle checkbox state & save to localStorage
+        // Update UI status indicator
+        function updateSyncStatus(status, color) {
+            const dot = document.getElementById('sync-dot');
+            const txt = document.getElementById('sync-status');
+            const mDot = document.getElementById('mobile-sync-dot');
+            
+            if (dot) dot.style.backgroundColor = color;
+            if (mDot) mDot.style.backgroundColor = color;
+            if (txt) txt.innerText = status;
+        }
+
+        // Fetch state from cloud
+        async function fetchState() {
+            if (isSyncing) return;
+            try {
+                const res = await fetch(SYNC_URL);
+                if (res.ok) {
+                    const remoteState = await res.json();
+                    mergeState(remoteState);
+                    updateSyncStatus('已同步 (Synced)', '#10b981'); // Green
+                } else if (res.status === 404) {
+                    // Not created yet, push current local state to cloud
+                    await pushState();
+                } else {
+                    updateSyncStatus('同步异常 (Sync Error)', '#ef4444'); // Red
+                }
+            } catch (e) {
+                console.error("Fetch sync error:", e);
+                updateSyncStatus('离线运行 (Offline)', '#f59e0b'); // Orange
+            }
+        }
+
+        // Merge remote state into local state
+        function mergeState(remote) {
+            if (!remote) return;
+            // Merge checklists
+            if (remote.checklists) {
+                Object.keys(remote.checklists).forEach(id => {
+                    state.checklists[id] = remote.checklists[id];
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.checked = remote.checklists[id];
+                        updateLabelStyle(id, el.checked);
+                    }
+                });
+            }
+            
+            // Merge custom items
+            if (remote.customItems) {
+                state.customItems = remote.customItems;
+                renderCustomItems();
+            }
+            
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+        }
+
+        // Push state to cloud
+        async function pushState() {
+            isSyncing = true;
+            updateSyncStatus('正在同步 (Syncing...)', '#eab308'); // Yellow
+            try {
+                const res = await fetch(SYNC_URL, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(state)
+                });
+                if (res.ok) {
+                    updateSyncStatus('已同步 (Synced)', '#10b981'); // Green
+                } else {
+                    updateSyncStatus('同步错误 (Sync Error)', '#ef4444'); // Red
+                }
+            } catch (e) {
+                console.error("Push sync error:", e);
+                updateSyncStatus('保存本地 (Local)', '#f59e0b'); // Orange
+            } finally {
+                isSyncing = false;
+            }
+        }
+
+        // Render custom items in UI
+        function renderCustomItems() {
+            const container = document.getElementById('custom-items-container');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            if (state.customItems.length === 0) {
+                container.innerHTML = '<p class="text-xs text-slate-500 py-3">没有自定义行李项目...</p>';
+                return;
+            }
+            
+            state.customItems.forEach((item, index) => {
+                const id = `custom-chk-${index}`;
+                const checked = item.checked ? 'checked' : '';
+                const style = item.checked ? 'text-decoration: line-through; color: #64748b;' : 'color: #cbd5e1;';
+                
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'flex items-center justify-between py-2 border-b border-slate-800/40';
+                itemDiv.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="${id}" class="roadbook-checkbox" ${checked} onclick="toggleCustomCheck(${index})"/>
+                        <label for="${id}" class="text-sm select-none cursor-pointer" style="${style}">${item.name}</label>
+                    </div>
+                    <button onclick="removeCustomItem(${index})" class="text-xs text-red-400 hover:text-red-300 font-semibold px-2 py-0.5 rounded hover:bg-red-500/10 transition">删除</button>
+                `;
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Toggle standard check
         window.toggleCheck = function(id) {
             const el = document.getElementById(id);
             if (!el) return;
-            const checked = el.checked;
+            state.checklists[id] = el.checked;
+            updateLabelStyle(id, el.checked);
             
-            const chks = JSON.parse(localStorage.getItem('roadbook_checklists') || '{}');
-            chks[id] = checked;
-            localStorage.setItem('roadbook_checklists', JSON.stringify(chks));
-            
-            // Update label styling
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
+        };
+
+        // Helper to update label style
+        function updateLabelStyle(id, isChecked) {
             const label = document.querySelector(`label[for="${id}"]`);
             if (label) {
-                if (checked) {
+                if (isChecked) {
                     label.style.textDecoration = 'line-through';
                     label.style.color = '#64748b';
                 } else {
@@ -712,7 +826,65 @@ def build_roadbook_site():
                     label.style.color = '#cbd5e1';
                 }
             }
+        }
+
+        // Add custom item
+        window.addCustomItem = function() {
+            const input = document.getElementById('custom-item-input');
+            if (!input) return;
+            const name = input.value.trim();
+            if (!name) return;
+            
+            state.customItems.push({ name: name, checked: false });
+            input.value = '';
+            
+            renderCustomItems();
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
         };
+
+        // Toggle custom check
+        window.toggleCustomCheck = function(index) {
+            if (index < 0 || index >= state.customItems.length) return;
+            state.customItems[index].checked = !state.customItems[index].checked;
+            
+            renderCustomItems();
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
+        };
+
+        // Remove custom item
+        window.removeCustomItem = function(index) {
+            if (index < 0 || index >= state.customItems.length) return;
+            state.customItems.splice(index, 1);
+            
+            renderCustomItems();
+            localStorage.setItem('roadbook_state', JSON.stringify(state));
+            pushState();
+        };
+
+        // Load checklists state on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load local backup first
+            const localBackup = localStorage.getItem('roadbook_state');
+            if (localBackup) {
+                state = JSON.parse(localBackup);
+                if (state.checklists) {
+                    Object.keys(state.checklists).forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el) {
+                            el.checked = state.checklists[id];
+                            updateLabelStyle(id, el.checked);
+                        }
+                    });
+                }
+                renderCustomItems();
+            }
+            
+            // Connect to Cloud Sync
+            fetchState();
+            setInterval(fetchState, 15000); // Poll every 15 seconds
+        });
 
         // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', () => {
