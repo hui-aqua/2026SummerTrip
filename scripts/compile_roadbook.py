@@ -208,13 +208,6 @@ def build_roadbook_site():
     content_html.append(f'<div id="section-cover" class="roadbook-section active-section">{cover_content}</div>')
     sidebar_html.append('<a href="#cover" class="nav-item active" onclick="showSection(\'cover\')">✨ 封面 (Cover)</a>')
     
-    # 2. Version
-    ver_path = os.path.join(docs_dir, "01_Version_History.md")
-    with open(ver_path, 'r', encoding='utf-8') as f:
-        ver_content = parse_markdown(f.read())
-    content_html.append(f'<div id="section-version" class="roadbook-section">{ver_content}</div>')
-    sidebar_html.append('<a href="#version" class="nav-item" onclick="showSection(\'version\')">📋 版本历史 (History)</a>')
-    
     # 3. Overview
     overview_path = os.path.join(docs_dir, "03_Trip_Overview.md")
     with open(overview_path, 'r', encoding='utf-8') as f:
@@ -263,13 +256,22 @@ def build_roadbook_site():
                 raw_text = f.read()
                 
             # Render special interactive map container under the Map section of markdown
-            map_container = f'\n\n## 今日地图 (Interactive Map)\n<div id="map-{day_key}" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>\n\n'
-            # Insert this map container right before meals or after route
-            if "## Route" in raw_text:
-                parts = raw_text.split("## Route")
-                raw_text = parts[0] + "## Route" + parts[1].replace("## Map\n(OpenStreetMap placeholder)", map_container)
+            map_container = f'## 今日地图 (Interactive Map)\n<div id="map-{day_key}" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>'
+            raw_text = re.sub(
+                r"## Map\s*\n.*?(?=\n---|\n## Charging)",
+                "## 今日地图 (Interactive Map)",
+                raw_text,
+                flags=re.DOTALL
+            )
             
             day_content = parse_markdown(raw_text)
+            
+            # Insert the raw, unescaped leaflet map container HTML right after the parsed heading
+            map_div_html = f'\n<div id="map-{day_key}" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>\n'
+            day_content = day_content.replace(
+                '<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>',
+                '<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>' + map_div_html
+            )
             content_html.append(f'<div id="section-day{day_num}" class="roadbook-section day-section" data-day="{day_key}">{day_content}</div>')
             
             # Simple summary of the day for the sidebar

@@ -4,19 +4,19 @@
 
 | 日期 | 酒店/住宿名称 | 地址 |
 |---|---|---|
-|22–24 Jul|Kristiansand Airbnb|Marikåpeveien 47, Kristiansand, Agder 4634|
-|24–25 Jul|Silkeborg Airbnb|Slienvej 51, Silkeborg 8600|
-|25–26 Jul|Lübeck Hotel|Herrendamm 2-4, Lübeck, SH 23556|
-|26 Jul–1 Aug|Berlin Hotel|Markgrafenstrasse 16–16a, Berlin 10969|
-|1–2 Aug|Neumünster Hotel|Max-Johannsen-Brücke 1, Neumünster 24537|
-|2–3 Aug|Aalborg Hotel|50 Skydebanevej, Aalborg 9000|
+|22–24 Jul|Kristiansand Airbnb|[Marikåpeveien 47, Kristiansand, Agder 4634](https://www.google.com/maps/search/?api=1&query=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634) ([Apple Map](https://maps.apple.com/?q=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634))|
+|24–25 Jul|Silkeborg Airbnb|[Slienvej 51, Silkeborg 8600](https://www.google.com/maps/search/?api=1&query=Slienvej+51%2C+Silkeborg+8600) ([Apple Map](https://maps.apple.com/?q=Slienvej+51%2C+Silkeborg+8600))|
+|25–26 Jul|Lübeck Hotel|[Herrendamm 2-4, Lübeck, SH 23556](https://www.google.com/maps/search/?api=1&query=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556) ([Apple Map](https://maps.apple.com/?q=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556))|
+|26 Jul–1 Aug|Berlin Hotel|[Markgrafenstrasse 16-16a, Berlin 10969](https://www.google.com/maps/search/?api=1&query=Markgrafenstrasse+16-16a%2C+Berlin+10969) ([Apple Map](https://maps.apple.com/?q=Markgrafenstrasse+16-16a%2C+Berlin+10969))|
+|1–2 Aug|Neumünster Hotel|[Max-Johannsen-Brücke 1, Neumünster 24537](https://www.google.com/maps/search/?api=1&query=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537) ([Apple Map](https://maps.apple.com/?q=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537))|
+|2–3 Aug|Aalborg Hotel|[50 Skydebanevej, Aalborg 9000](https://www.google.com/maps/search/?api=1&query=50+Skydebanevej%2C+Aalborg+9000) ([Apple Map](https://maps.apple.com/?q=50+Skydebanevej%2C+Aalborg+9000))|
 
 ---
 
 ## 住宿详细卡片（Hotel Details）
 
 ### 1. Kristiansand Airbnb (22-24 Jul)
-- **地址**：Marikåpeveien 47, Kristiansand, Agder 4634
+- **地址**：[Marikåpeveien 47, Kristiansand, Agder 4634](https://www.google.com/maps/search/?api=1&query=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634) ([Apple Map](https://maps.apple.com/?q=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634))
 - **概述（Overview）**：位于Justneshalvøya半岛的现代住宅，环境优美安静，非常适合家庭入住。靠近湖泊与森林步道。
 - **停车（Parking）**：房屋自带专用免费停车位（Private driveway parking）。
 - **EV充电（EV Charging）**：房屋未确认充电桩（TODO），但附近Rona和Sørlandsparken有大量超级充电桩。
@@ -30,7 +30,7 @@
 - **街景占位符（Street View placeholder）**：[Google StreetView](https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=58.1963,8.0165)
 
 ### 2. Silkeborg Airbnb (24-25 Jul)
-- **地址**：Slienvej 51, Silkeborg 8600
+- **地址**：[Slienvej 51, Silkeborg 8600](https://www.google.com/maps/search/?api=1&query=Slienvej+51%2C+Silkeborg+8600) ([Apple Map](https://maps.apple.com/?q=Slienvej+51%2C+Silkeborg+8600))
 - **概述（Overview）**：位于Silkeborg Gødvad区的舒适住宅，绿树环绕，极具丹麦生活气息。
 - **停车（Parking）**：房屋前私人专用免费停车位。
 - **EV充电（EV Charging）**：房屋不带充电桩，可使用Gødvad或市区Clever/Norlys公共充电桩。
@@ -44,7 +44,7 @@
 - **街景占位符（Street View placeholder）**：[Google StreetView](https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=56.1834,9.6052)
 
 ### 3. Lübeck Hotel (25-26 Jul)
-- **地址**：Herrendamm 2-4, Lübeck, SH 23556
+- **地址**：[Herrendamm 2-4, Lübeck, SH 23556](https://www.google.com/maps/search/?api=1&query=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556) ([Apple Map](https://maps.apple.com/?q=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556))
 - **概述（Overview）**：位于吕贝克市郊的舒适型酒店，靠近A1高速公路，前往历史老城区非常便利。
 - **停车（Parking）**：酒店专属收费停车场（10 EUR/天）。
 - **EV充电（EV Charging）**：酒店内配备EV充电站，或使用附近超充站（Bei der Lohmühle 11A）。
@@ -58,7 +58,7 @@
 - **街景占位符（Street View placeholder）**：[Google StreetView](https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=53.8821,10.6698)
 
 ### 4. Berlin Hotel (26 Jul - 1 Aug)
-- **地址**：Markgrafenstrasse 16–16a, Berlin 10969
+- **地址**：[Markgrafenstrasse 16-16a, Berlin 10969](https://www.google.com/maps/search/?api=1&query=Markgrafenstrasse+16-16a%2C+Berlin+10969) ([Apple Map](https://maps.apple.com/?q=Markgrafenstrasse+16-16a%2C+Berlin+10969))
 - **概述（Overview）**：临近查理检查哨的高端公寓式酒店，房间配备小厨房，非常适合带幼儿家庭长期居住。
 - **停车（Parking）**：酒店专属地下车库（收费25 EUR/天）。
 - **EV充电（EV Charging）**：地下车库内配备EV充电桩（Wallbox）。
@@ -72,7 +72,7 @@
 - **街景占位符（Street View placeholder）**：[Google StreetView](https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=52.5056,13.3951)
 
 ### 5. Neumünster Hotel (1-2 Aug)
-- **地址**：Max-Johannsen-Brücke 1, Neumünster 24537
+- **地址**：[Max-Johannsen-Brücke 1, Neumünster 24537](https://www.google.com/maps/search/?api=1&query=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537) ([Apple Map](https://maps.apple.com/?q=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537))
 - **概述（Overview）**：位于新明斯特北部的舒适酒店，临近Holstenhallen展览馆，提供桑拿和免费无线网。
 - **停车（Parking）**：酒店专属免费停车场。
 - **EV充电（EV Charging）**：酒店内部配备EV充电桩。
@@ -86,7 +86,7 @@
 - **街景占位符（Street View placeholder）**：[Google StreetView](https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=54.0898,9.9812)
 
 ### 6. Aalborg Hotel (2-3 Aug)
-- **地址**：50 Skydebanevej, Aalborg 9000
+- **地址**：[50 Skydebanevej, Aalborg 9000](https://www.google.com/maps/search/?api=1&query=50+Skydebanevej%2C+Aalborg+9000) ([Apple Map](https://maps.apple.com/?q=50+Skydebanevej%2C+Aalborg+9000))
 - **概述（Overview）**：靠近Limfjord湾和游艇码头的舒适青年旅舍，配有大型绿地和儿童户外活动空间。
 - **停车（Parking）**：旅舍提供专属免费露天停车场。
 - **EV充电（EV Charging）**：码头及露营区公共充电站（Clever/Norlys）。

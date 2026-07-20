@@ -223,7 +223,6 @@
 
         <nav class="flex-grow flex flex-col gap-1">
             <a href="#cover" class="nav-item active" onclick="showSection('cover')">✨ 封面 (Cover)</a>
-<a href="#version" class="nav-item" onclick="showSection('version')">📋 版本历史 (History)</a>
 <a href="#overview" class="nav-item" onclick="showSection('overview')">🗺️ 旅行概述 (Overview)</a>
 <a href="#family" class="nav-item" onclick="showSection('family')">👶 家庭与作息 (Family)</a>
 <a href="#vehicle" class="nav-item" onclick="showSection('vehicle')">⚡ 车辆与充电 (Vehicle)</a>
@@ -271,14 +270,6 @@
         </div>
 
         <div id="section-cover" class="roadbook-section active-section"><img src="assets/trip_banner.png" alt="Europe Family Road Trip 2026" class="w-full rounded-xl shadow-lg mb-8 border border-slate-800" /><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">2026 欧洲家庭自驾旅行手册（Family Roadbook V4.0）</h1>
-<div class="h-2"></div></div>
-<div id="section-version" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">版本历史（Version History）</h1>
-<div class="h-2"></div>
-<ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">版本</strong>：V4.0 Working Draft（中文整合版）</li>
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">定位</strong>：作为后续 Agent 的唯一输入文档（Single Source of Truth）</li>
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">说明</strong>：本版本尽可能整合目前所有已确认的信息；所有尚未完成的数据统一使用 `TODO` 标记，方便后续自动补全。</li>
-</ul>
 <div class="h-2"></div></div>
 <div id="section-overview" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">旅行概述（Trip Overview）</h1>
 <div class="h-2"></div>
@@ -399,10 +390,10 @@
 </ul>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">去程待办事项（TODO）</h3>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-b1aec303ff" class="roadbook-checkbox" checked onclick="toggleCheck('chk-b1aec303ff')"/><label for="chk-b1aec303ff" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">登船流程</strong>：提前60分钟（07:00前）抵达 Kristiansand 码头进行 Check-in。顺着指示牌排队安检，扫描条形码换取登船牌。将车停入指定的汽车甲板层，熄火、拉紧手刹、挂入档位。随身携带随行婴儿用品，进入乘客区。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-e8c77bfd18" class="roadbook-checkbox" checked onclick="toggleCheck('chk-e8c77bfd18')"/><label for="chk-e8c77bfd18" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上早餐建议</strong>：预订了自助早餐可在 SuperSpeed 1 餐厅享用，或者在甲板上的 Catch Me If You Can 咖啡厅购买三明治与咖啡。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-f92bc241f7" class="roadbook-checkbox" checked onclick="toggleCheck('chk-f92bc241f7')"/><label for="chk-f92bc241f7" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">儿童活动区位置</strong>：船上有专门的儿童活动室（Playroom），配有玩具和播放卡通片的电视，适合Noora玩耍。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-d5708831c9" class="roadbook-checkbox" checked onclick="toggleCheck('chk-d5708831c9')"/><label for="chk-d5708831c9" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">最佳观景位置</strong>：7层和8层的船尾观景甲板，或前侧全景沙龙。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-b1aec303ff" class="roadbook-checkbox"  onclick="toggleCheck('chk-b1aec303ff')"/><label for="chk-b1aec303ff" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">登船流程</strong>：提前60分钟（07:00前）抵达 Kristiansand 码头进行 Check-in。顺着指示牌排队安检，扫描条形码换取登船牌。将车停入指定的汽车甲板层，熄火、拉紧手刹、挂入档位。随身携带随行婴儿用品，进入乘客区。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-e8c77bfd18" class="roadbook-checkbox"  onclick="toggleCheck('chk-e8c77bfd18')"/><label for="chk-e8c77bfd18" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上早餐建议</strong>：预订了自助早餐可在 SuperSpeed 1 餐厅享用，或者在甲板上的 Catch Me If You Can 咖啡厅购买三明治与咖啡。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-f92bc241f7" class="roadbook-checkbox"  onclick="toggleCheck('chk-f92bc241f7')"/><label for="chk-f92bc241f7" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">儿童活动区位置</strong>：船上有专门的儿童活动室（Playroom），配有玩具和播放卡通片的电视，适合Noora玩耍。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-d5708831c9" class="roadbook-checkbox"  onclick="toggleCheck('chk-d5708831c9')"/><label for="chk-d5708831c9" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">最佳观景位置</strong>：7层和8层的船尾观景甲板，或前侧全景沙龙。</label></div>
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
@@ -420,20 +411,20 @@
 </ul>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">回程待办事项（TODO）</h3>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-c1a5d22b2b" class="roadbook-checkbox" checked onclick="toggleCheck('chk-c1a5d22b2b')"/><label for="chk-c1a5d22b2b" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上充电具体流程</strong>：回程乘坐 HSC Fjord FSTR（双体快速轮渡），已预订船上 EV 充电。登船时主动向工作人员出示“Ladepunkt el-bil”预订凭证，车辆将被引导至有充电插座的甲板车位。自备 Type2 充电线连接充电桩，船员会统一通电进行充电。</label></div>
-<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-174679319a" class="roadbook-checkbox" checked onclick="toggleCheck('chk-174679319a')"/><label for="chk-174679319a" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">下船路线及注意事项</strong>：抵达 Kristiansand 后，听从广播指示返回汽车甲板。解开充电线并收纳好，等待前方车辆驶出后顺次下船。下船后直接进入 E39 高速返回 Stavanger。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-c1a5d22b2b" class="roadbook-checkbox"  onclick="toggleCheck('chk-c1a5d22b2b')"/><label for="chk-c1a5d22b2b" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">船上充电具体流程</strong>：回程乘坐 HSC Fjord FSTR（双体快速轮渡），已预订船上 EV 充电。登船时主动向工作人员出示“Ladepunkt el-bil”预订凭证，车辆将被引导至有充电插座的甲板车位。自备 Type2 充电线连接充电桩，船员会统一通电进行充电。</label></div>
+<div class="checkbox-container flex items-center gap-3 my-2"><input type="checkbox" id="chk-174679319a" class="roadbook-checkbox"  onclick="toggleCheck('chk-174679319a')"/><label for="chk-174679319a" class="text-slate-300 select-none cursor-pointer"><strong class="text-white font-semibold">下船路线及注意事项</strong>：抵达 Kristiansand 后，听从广播指示返回汽车甲板。解开充电线并收纳好，等待前方车辆驶出后顺次下船。下船后直接进入 E39 高速返回 Stavanger。</label></div>
 <div class="h-2"></div></div>
 <div id="section-hotels" class="roadbook-section"><h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">住宿信息（Hotels）</h1>
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">预订概览</h2>
 <div class="h-2"></div>
-<div class="overflow-x-auto my-6"><table class="min-w-full border-collapse border border-slate-800 text-sm"><thead class="bg-slate-900 text-slate-300 text-left font-bold"><tr><th class="px-4 py-3 border border-slate-800 text-left">日期</th><th class="px-4 py-3 border border-slate-800 text-left">酒店/住宿名称</th><th class="px-4 py-3 border border-slate-800 text-left">地址</th></tr></thead><tbody class="divide-y divide-slate-800 text-slate-400"><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">22–24 Jul</td><td class="px-4 py-3 border border-slate-800 text-left">Kristiansand Airbnb</td><td class="px-4 py-3 border border-slate-800 text-left">Marikåpeveien 47, Kristiansand, Agder 4634</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">24–25 Jul</td><td class="px-4 py-3 border border-slate-800 text-left">Silkeborg Airbnb</td><td class="px-4 py-3 border border-slate-800 text-left">Slienvej 51, Silkeborg 8600</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">25–26 Jul</td><td class="px-4 py-3 border border-slate-800 text-left">Lübeck Hotel</td><td class="px-4 py-3 border border-slate-800 text-left">Herrendamm 2-4, Lübeck, SH 23556</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">26 Jul–1 Aug</td><td class="px-4 py-3 border border-slate-800 text-left">Berlin Hotel</td><td class="px-4 py-3 border border-slate-800 text-left">Markgrafenstrasse 16–16a, Berlin 10969</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">1–2 Aug</td><td class="px-4 py-3 border border-slate-800 text-left">Neumünster Hotel</td><td class="px-4 py-3 border border-slate-800 text-left">Max-Johannsen-Brücke 1, Neumünster 24537</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">2–3 Aug</td><td class="px-4 py-3 border border-slate-800 text-left">Aalborg Hotel</td><td class="px-4 py-3 border border-slate-800 text-left">50 Skydebanevej, Aalborg 9000</td></tr></tbody></table></div><hr class="my-6 border-slate-800" />
+<div class="overflow-x-auto my-6"><table class="min-w-full border-collapse border border-slate-800 text-sm"><thead class="bg-slate-900 text-slate-300 text-left font-bold"><tr><th class="px-4 py-3 border border-slate-800 text-left">日期</th><th class="px-4 py-3 border border-slate-800 text-left">酒店/住宿名称</th><th class="px-4 py-3 border border-slate-800 text-left">地址</th></tr></thead><tbody class="divide-y divide-slate-800 text-slate-400"><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">22–24 Jul</td><td class="px-4 py-3 border border-slate-800 text-left">Kristiansand Airbnb</td><td class="px-4 py-3 border border-slate-800 text-left"><a href="https://www.google.com/maps/search/?api=1&amp;query=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Marikåpeveien 47, Kristiansand, Agder 4634</a> (<a href="https://maps.apple.com/?q=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">24–25 Jul</td><td class="px-4 py-3 border border-slate-800 text-left">Silkeborg Airbnb</td><td class="px-4 py-3 border border-slate-800 text-left"><a href="https://www.google.com/maps/search/?api=1&amp;query=Slienvej+51%2C+Silkeborg+8600" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Slienvej 51, Silkeborg 8600</a> (<a href="https://maps.apple.com/?q=Slienvej+51%2C+Silkeborg+8600" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">25–26 Jul</td><td class="px-4 py-3 border border-slate-800 text-left">Lübeck Hotel</td><td class="px-4 py-3 border border-slate-800 text-left"><a href="https://www.google.com/maps/search/?api=1&amp;query=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Herrendamm 2-4, Lübeck, SH 23556</a> (<a href="https://maps.apple.com/?q=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">26 Jul–1 Aug</td><td class="px-4 py-3 border border-slate-800 text-left">Berlin Hotel</td><td class="px-4 py-3 border border-slate-800 text-left"><a href="https://www.google.com/maps/search/?api=1&amp;query=Markgrafenstrasse+16-16a%2C+Berlin+10969" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Markgrafenstrasse 16-16a, Berlin 10969</a> (<a href="https://maps.apple.com/?q=Markgrafenstrasse+16-16a%2C+Berlin+10969" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">1–2 Aug</td><td class="px-4 py-3 border border-slate-800 text-left">Neumünster Hotel</td><td class="px-4 py-3 border border-slate-800 text-left"><a href="https://www.google.com/maps/search/?api=1&amp;query=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Max-Johannsen-Brücke 1, Neumünster 24537</a> (<a href="https://maps.apple.com/?q=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</td></tr><tr class="hover:bg-slate-900/40"><td class="px-4 py-3 border border-slate-800 text-left">2–3 Aug</td><td class="px-4 py-3 border border-slate-800 text-left">Aalborg Hotel</td><td class="px-4 py-3 border border-slate-800 text-left"><a href="https://www.google.com/maps/search/?api=1&amp;query=50+Skydebanevej%2C+Aalborg+9000" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">50 Skydebanevej, Aalborg 9000</a> (<a href="https://maps.apple.com/?q=50+Skydebanevej%2C+Aalborg+9000" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</td></tr></tbody></table></div><hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">住宿详细卡片（Hotel Details）</h2>
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">1. Kristiansand Airbnb (22-24 Jul)</h3>
 <ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：Marikåpeveien 47, Kristiansand, Agder 4634</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：<a href="https://www.google.com/maps/search/?api=1&amp;query=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Marikåpeveien 47, Kristiansand, Agder 4634</a> (<a href="https://maps.apple.com/?q=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">概述（Overview）</strong>：位于Justneshalvøya半岛的现代住宅，环境优美安静，非常适合家庭入住。靠近湖泊与森林步道。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">停车（Parking）</strong>：房屋自带专用免费停车位（Private driveway parking）。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">EV充电（EV Charging）</strong>：房屋未确认充电桩（TODO），但附近Rona和Sørlandsparken有大量超级充电桩。</li>
@@ -449,7 +440,7 @@
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">2. Silkeborg Airbnb (24-25 Jul)</h3>
 <ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：Slienvej 51, Silkeborg 8600</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：<a href="https://www.google.com/maps/search/?api=1&amp;query=Slienvej+51%2C+Silkeborg+8600" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Slienvej 51, Silkeborg 8600</a> (<a href="https://maps.apple.com/?q=Slienvej+51%2C+Silkeborg+8600" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">概述（Overview）</strong>：位于Silkeborg Gødvad区的舒适住宅，绿树环绕，极具丹麦生活气息。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">停车（Parking）</strong>：房屋前私人专用免费停车位。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">EV充电（EV Charging）</strong>：房屋不带充电桩，可使用Gødvad或市区Clever/Norlys公共充电桩。</li>
@@ -465,7 +456,7 @@
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">3. Lübeck Hotel (25-26 Jul)</h3>
 <ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：Herrendamm 2-4, Lübeck, SH 23556</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：<a href="https://www.google.com/maps/search/?api=1&amp;query=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Herrendamm 2-4, Lübeck, SH 23556</a> (<a href="https://maps.apple.com/?q=Herrendamm+2-4%2C+L%C3%BCbeck%2C+SH+23556" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">概述（Overview）</strong>：位于吕贝克市郊的舒适型酒店，靠近A1高速公路，前往历史老城区非常便利。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">停车（Parking）</strong>：酒店专属收费停车场（10 EUR/天）。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">EV充电（EV Charging）</strong>：酒店内配备EV充电站，或使用附近超充站（Bei der Lohmühle 11A）。</li>
@@ -481,7 +472,7 @@
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">4. Berlin Hotel (26 Jul - 1 Aug)</h3>
 <ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：Markgrafenstrasse 16–16a, Berlin 10969</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：<a href="https://www.google.com/maps/search/?api=1&amp;query=Markgrafenstrasse+16-16a%2C+Berlin+10969" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Markgrafenstrasse 16-16a, Berlin 10969</a> (<a href="https://maps.apple.com/?q=Markgrafenstrasse+16-16a%2C+Berlin+10969" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">概述（Overview）</strong>：临近查理检查哨的高端公寓式酒店，房间配备小厨房，非常适合带幼儿家庭长期居住。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">停车（Parking）</strong>：酒店专属地下车库（收费25 EUR/天）。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">EV充电（EV Charging）</strong>：地下车库内配备EV充电桩（Wallbox）。</li>
@@ -497,7 +488,7 @@
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">5. Neumünster Hotel (1-2 Aug)</h3>
 <ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：Max-Johannsen-Brücke 1, Neumünster 24537</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：<a href="https://www.google.com/maps/search/?api=1&amp;query=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Max-Johannsen-Brücke 1, Neumünster 24537</a> (<a href="https://maps.apple.com/?q=Max-Johannsen-Br%C3%BCcke+1%2C+Neum%C3%BCnster+24537" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">概述（Overview）</strong>：位于新明斯特北部的舒适酒店，临近Holstenhallen展览馆，提供桑拿和免费无线网。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">停车（Parking）</strong>：酒店专属免费停车场。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">EV充电（EV Charging）</strong>：酒店内部配备EV充电桩。</li>
@@ -513,7 +504,7 @@
 <div class="h-2"></div>
 <h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">6. Aalborg Hotel (2-3 Aug)</h3>
 <ul class="my-2">
-<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：50 Skydebanevej, Aalborg 9000</li>
+<li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">地址</strong>：<a href="https://www.google.com/maps/search/?api=1&amp;query=50+Skydebanevej%2C+Aalborg+9000" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">50 Skydebanevej, Aalborg 9000</a> (<a href="https://maps.apple.com/?q=50+Skydebanevej%2C+Aalborg+9000" target="_blank" class="text-cyan-400 hover:underline hover:text-cyan-300">Apple Map</a>)</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">概述（Overview）</strong>：靠近Limfjord湾和游艇码头的舒适青年旅舍，配有大型绿地和儿童户外活动空间。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">停车（Parking）</strong>：旅舍提供专属免费露天停车场。</li>
 <li class="ml-6 list-disc text-slate-300 my-1"><strong class="text-white font-semibold">EV充电（EV Charging）</strong>：码头及露营区公共充电站（Clever/Norlys）。</li>
@@ -573,15 +564,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Kristiansand Justneshalvøya Airbnb"] --&gt; S["Joker Justvik"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Apotek 1 Rona"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Justneshalvøya半岛内有20多个高品质儿童游乐场（如Vikingborga、Julius），且有非常适合推婴儿车的森林木雕步道 Trollstien。"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House Rona"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day01" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -702,15 +687,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Kristiansand Justneshalvøya Airbnb"] --&gt; S["Joker Justvik"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Apotek 1 Rona"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Justneshalvøya半岛内有20多个高品质儿童游乐场（如Vikingborga、Julius），且有非常适合推婴儿车的森林木雕步道 Trollstien。"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House Rona"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day02" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -835,15 +814,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Silkeborg Gødvad Airbnb"] --&gt; S["REMA 1000 Gødvad"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Silkeborg Svane Apotek"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Indelukket Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["市中心 Torvet 广场周边的咖啡馆。"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day03" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -964,15 +937,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Hotel Leano (formerly Hotel zum Ratsherrn)"] --&gt; S["CITTI-PARK Lübeck"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Apotheke im CITTI-PARK"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Drägerpark Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["酒店自带餐厅或老城区咖啡馆。"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day04" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1093,15 +1060,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Mondrian Suites Berlin am Checkpoint Charlie"] --&gt; S["Wolt Market"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Checkpoint Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Theodor-Wolff-Park Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day05" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1222,15 +1183,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Mondrian Suites Berlin am Checkpoint Charlie"] --&gt; S["Wolt Market"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Checkpoint Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Theodor-Wolff-Park Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day06" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1350,15 +1305,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Mondrian Suites Berlin am Checkpoint Charlie"] --&gt; S["Wolt Market"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Checkpoint Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Theodor-Wolff-Park Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day07" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1478,15 +1427,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Mondrian Suites Berlin am Checkpoint Charlie"] --&gt; S["Wolt Market"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Checkpoint Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Theodor-Wolff-Park Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day08" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1606,15 +1549,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Mondrian Suites Berlin am Checkpoint Charlie"] --&gt; S["Wolt Market"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Checkpoint Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Theodor-Wolff-Park Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day09" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1733,15 +1670,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Mondrian Suites Berlin am Checkpoint Charlie"] --&gt; S["Wolt Market"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Checkpoint Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["Theodor-Wolff-Park Playground"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["Espresso House"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day10" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1860,15 +1791,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Best Western Hotel Prisma"] --&gt; S["Aldi Nord"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Holstein Apotheke"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["酒店内有安静的草坪花园，或前往 Tierpark Neumünster"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["酒店内 Campino's Restaurant 咖啡座。"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day11" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -1990,15 +1915,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Map</h2>
-<div class="h-2"></div>
-<div class="mermaid-diagram bg-slate-900/60 p-4 rounded-lg my-4 border border-slate-800"><pre class="mermaid">graph TD
-<p class="text-slate-300 my-2 leading-relaxed">    H["Danhostel Aalborg (Aalborg Camping)"] --&gt; S["Meny Vestbyen"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; P["Kastetvejs Apotek"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; G["旅舍自带户外滑梯和秋千，或前往 Vestre Fjordpark"]</p>
-<p class="text-slate-300 my-2 leading-relaxed">    H --&gt; C["旅舍咖啡吧，或前往 Aalborg Vestby 城区咖啡厅。"]</pre></div></p>
-<p class="text-slate-300 my-2 leading-relaxed"><em class="text-slate-400 italic">(已在网页版集成 Leaflet.js 交互式地图)</em></p>
-<div class="h-2"></div>
+<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
+<div id="map-Day12" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
@@ -2121,14 +2040,9 @@
 <div class="h-2"></div>
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
-<div class="h-2"></div>
-<div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>
-<p class="text-slate-300 my-2 leading-relaxed">&lt;div id="map-Day13" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"&gt;&lt;/div&gt;</p>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<p class="text-slate-300 my-2 leading-relaxed">TODO</p>
-<div class="h-2"></div>
+<div id="map-Day13" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>
+
 <hr class="my-6 border-slate-800" />
 <div class="h-2"></div>
 <h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">Charging</h2>
