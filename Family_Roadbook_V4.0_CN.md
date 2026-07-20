@@ -2050,7 +2050,6 @@ N/A
 
 ## 电子设备（Electronics）
 
-- [ ] 相机（Camera）
 - [ ] 笔记本电脑（Laptop）
 - [ ] 各种充电器及插头转换器
 <!-- END OF 11_Packing_List.md -->

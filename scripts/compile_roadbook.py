@@ -3,7 +3,7 @@ import re
 import json
 
 # Paths
-workspace = r"d:\AppleICloud\iCloudDrive\2026SummerTrip"
+workspace = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 docs_dir = os.path.join(workspace, "docs")
 days_dir = os.path.join(docs_dir, "days")
 output_html = os.path.join(workspace, "index.html")
