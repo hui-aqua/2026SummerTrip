@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+; ==========================
+; VS Code
+; ==========================
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCode]
+@="Open with VS Code"
+"Icon"="code"
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]
+@="cmd.exe /c start \"\" code \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]
+@="Open with VS Code"
+"Icon"="code"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]
+@="cmd.exe /c start \"\" code \"%V\""
+
+; ==========================
+; Antigravity IDE
+; ==========================
+
+[HKEY_CLASSES_ROOT\Directory\shell\AntigravityIDE]
+@="Open with Antigravity IDE"
+"Icon"="antigravity-ide"
+
+[HKEY_CLASSES_ROOT\Directory\shell\AntigravityIDE\command]
+@="cmd.exe /c start \"\" antigravity-ide \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AntigravityIDE]
+@="Open with Antigravity IDE"
+"Icon"="antigravity-ide"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AntigravityIDE\command]
+@="cmd.exe /c start \"\" antigravity-ide \"%V\""

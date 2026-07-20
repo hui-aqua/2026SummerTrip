@@ -1,0 +1,36 @@
+project:
+  name: Family Roadbook 2026 Europe
+
+status:
+  version: 4.0
+  language: zh-CN
+  output:
+    - Markdown
+    - PDF
+    - Website
+
+family:
+  adults: 2
+  child:
+    name: Noora
+    age: 21 months
+
+vehicle:
+  model: 2024 Hyundai Kona Electric Long Range
+
+trip:
+  start: Stavanger
+  end: Stavanger
+
+confirmed:
+  ferries: true
+  hotels: true
+  route: true
+
+todo:
+  maps: true
+  routing: true
+  restaurants: true
+  charging: true
+  weather: true
+  budget: true
