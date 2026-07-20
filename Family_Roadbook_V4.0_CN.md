@@ -2042,6 +2042,12 @@ N/A
 - [ ] 纸尿裤/湿巾
 - [ ] 安全座椅
 
+## 生活与食品类（Household & Food）
+
+- [ ] 大米（Rice）
+- [ ] 电饭煲（Rice Cooker）
+- [ ] 新鲜水果（Fruit）
+
 ## 电子设备（Electronics）
 
 - [ ] 相机（Camera）
