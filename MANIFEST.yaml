@@ -28,9 +28,9 @@ confirmed:
   route: true
 
 todo:
-  maps: true
-  routing: true
-  restaurants: true
-  charging: true
-  weather: true
-  budget: true
+  maps: false
+  routing: false
+  restaurants: false
+  charging: false
+  weather: false
+  budget: false
