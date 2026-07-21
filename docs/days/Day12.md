@@ -10,7 +10,7 @@
 - **日期（Date）**: 2026-08-02
 - **行驶距离（Driving Distance）**: 约 360 km
 - **行驶时间（Driving Time）**: 约 3.8 小时
-- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 25% (已精确计算)
+- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 25%
 - **天气（Weather）**: 晴转多云 (预计 18-22°C)
 - **步行距离（Walking Distance）**: 约 3-4 km (Aalborg 港区/老城)
 - **入住酒店（Hotel）**: Aalborg Hotel (50 Skydebanevej, Aalborg 9000)

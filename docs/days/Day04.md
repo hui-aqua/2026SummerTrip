@@ -9,7 +9,7 @@
 ## Dashboard
 - **日期（Date）**: 2026-07-25
 - **行驶距离（Driving Distance）**: 约 340 km (TODO 确认实际行驶里程)
-- **行驶时间（Driving Time）**: 3.5 小时 (已确认)
+- **行驶时间（Driving Time）**: 3.5 小时
 - **预计剩余电量（Expected SOC）**: 出发 SOC: 90% -> 抵达 SOC: TODO
 - **天气（Weather）**: 晴转多云 (预计 19-23°C)
 - **步行距离（Walking Distance）**: 约 2-4 km (吕贝克老城)

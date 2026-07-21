@@ -10,7 +10,7 @@
 - **日期（Date）**: 2026-07-24
 - **行驶距离（Driving Distance）**: 约 140 km (丹麦路段)
 - **行驶时间（Driving Time）**: 约 2 小时 (丹麦路段)
-- **预计剩余电量（Expected SOC）**: 出发 95% -> 抵达 40% (已精确计算)
+- **预计剩余电量（Expected SOC）**: 出发 95% -> 抵达 40%
 - **天气（Weather）**: 多云有微风 (预计 17-21°C)
 - **步行距离（Walking Distance）**: 约 2-3 km (Silkeborg市中心)
 - **入住酒店（Hotel）**: Silkeborg Airbnb (Slienvej 51, Silkeborg 8600)

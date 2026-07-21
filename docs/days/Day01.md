@@ -8,9 +8,9 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-07-22
-- **行驶距离（Driving Distance）**: 232 km (已确认)
-- **行驶时间（Driving Time）**: 3.5 小时 (已确认)
-- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 30% (已精确计算)
+- **行驶距离（Driving Distance）**: 232 km
+- **行驶时间（Driving Time）**: 3.5 小时
+- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 30%
 - **天气（Weather）**: 晴转多云 (预计 18-22°C)
 - **步行距离（Walking Distance）**: 约 1-2 km
 - **入住酒店（Hotel）**: Kristiansand Airbnb (Marikåpeveien 47, Kristiansand, Agder 4634)

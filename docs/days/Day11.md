@@ -10,7 +10,7 @@
 - **日期（Date）**: 2026-08-01
 - **行驶距离（Driving Distance）**: 约 360 km
 - **行驶时间（Driving Time）**: 约 3.8 小时
-- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 30% (已精确计算)
+- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 30%
 - **天气（Weather）**: 晴朗 (预计 19-24°C)
 - **步行距离（Walking Distance）**: 约 2-3 km (Neumünster 城区/Outlet)
 - **入住酒店（Hotel）**: Neumünster Hotel (Max-Johannsen-Brücke 1, Neumünster 24537)

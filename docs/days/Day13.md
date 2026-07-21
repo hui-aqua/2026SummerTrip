@@ -8,9 +8,9 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-08-03
-- **行驶距离（Driving Distance）**: 约 50 km (丹麦) + 235 km (挪威) = 285 km (已确认)
-- **行驶时间（Driving Time）**: 约 0.6 小时 (丹麦) + 3.5 小时 (挪威) = 4.1 小时 (已确认)
-- **预计剩余电量（Expected SOC）**: 出发 SOC: 80%+ -> 船上充电至 90%+ -> 抵达 Stavanger SOC: 30%+ (已精确计算)
+- **行驶距离（Driving Distance）**: 约 50 km (丹麦) + 235 km (挪威) = 285 km
+- **行驶时间（Driving Time）**: 约 0.6 小时 (丹麦) + 3.5 小时 (挪威) = 4.1 小时
+- **预计剩余电量（Expected SOC）**: 出发 SOC: 80%+ -> 船上充电至 90%+ -> 抵达 Stavanger SOC: 30%+
 - **天气（Weather）**: 多云有雨 (预计 16-20°C)
 - **步行距离（Walking Distance）**: 约 1-2 km
 - **入住酒店（Hotel）**: Return Home (Stavanger)

@@ -10,7 +10,7 @@
 - **日期（Date）**: 2026-07-31
 - **行驶距离（Driving Distance）**: 0 km
 - **行驶时间（Driving Time）**: 0 小时
-- **预计剩余电量（Expected SOC）**: 电量充电至 90%+ (准备明日出发) (已精确计算)
+- **预计剩余电量（Expected SOC）**: 电量充电至 90%+ (准备明日出发)
 - **天气（Weather）**: 小雨转晴 (预计 20-24°C)
 - **步行距离（Walking Distance）**: 约 4-6 km
 - **入住酒店（Hotel）**: Berlin Hotel (Markgrafenstrasse 16–16a, Berlin 10969)

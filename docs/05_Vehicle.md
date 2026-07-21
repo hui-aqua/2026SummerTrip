@@ -15,7 +15,7 @@ Tesla Supercharger → IONITY → Circle K Charge → Recharge
 - 充至（Charge target）：80%
 - 抵达酒店（Arrival SOC）：20%~30%
 
-## Kona EV 充电与电量概览 (已精确计算)
+## Kona EV 充电与电量概览
 
 | 天数（Day） | 路线（Route） | 推荐充电站（Recommended Charger） | 预计电量变化（Expected SOC） |
 |---|---|---|---|
