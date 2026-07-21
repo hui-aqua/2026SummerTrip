@@ -8,15 +8,15 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-07-26
-- **行驶距离（Driving Distance）**: 约 290 km
-- **行驶时间（Driving Time）**: 约 3 小时
-- **预计剩余电量（Expected SOC）**: 出发 SOC: 90% -> 抵达 SOC: TODO
-- **天气（Weather）**: 多云转晴 (预计 20-25°C)
+- **行驶距离（Driving Distance）**: 约 283 km
+- **行驶时间（Driving Time）**: 约 3小时纯驾驶；含午餐、充电和幼儿休息，建议按4小时15分预留
+- **预计剩余电量（Expected SOC）**: 建议 90% 出发 → 预计 25–40% 抵达
+- **天气（Weather）**: 出发前 48 小时更新；当天早晨再次确认
 - **步行距离（Walking Distance）**: 约 3-5 km (柏林初探索)
 - **入住酒店（Hotel）**: Berlin Hotel (Markgrafenstrasse 16–16a, Berlin 10969)
 - **停车场（Parking）**: Mondrian Suites 地下车库 (25 EUR/天)
 - **办理入住（Check-in）**: 15:00
-- **办理退房（Check-out）**: 09:30 前退房 (Lübeck Hotel)
+- **办理退房（Check-out）**: 11:00
 - **今日亮点（Highlights）**: 柏林初印象
 
 ---
@@ -37,7 +37,7 @@
 ## Route
 驾车路线（Driving route）：Lübeck → A20/A111 → Berlin (Markgrafenstrasse 16-16a)
 步行路线（Walking route）：约 3-5 km (柏林初探索) 酒店周边步行踩点
-停车（Parking）：酒店地下停车场 (TODO 确认收费与预订情况)
+停车（Parking）：Mondrian Suites 地下车库 (25 EUR/天)
 
 ---
 
@@ -55,17 +55,30 @@ graph TD
 ---
 
 ## Charging
-Departure SOC: 90%+
-Recommended charger: 途中 A19/A24 沿线超充站 (TODO)
-Backup charger: Tesla Supercharger Berlin-Mitte (Kopenhagener Str.)
-Arrival SOC: 30%
+
+Departure SOC: 90%
+
+Recommended charger:
+A24 沿线 Prignitz 区域快充站 (途中充电)
+
+Backup charger:
+Wittenberge 或 Neuruppin 区域 CCS 快充站
+
+Arrival SOC:
+25–40%
+
+### Charging decision rule
+
+- **切换条件**：如果导航预测抵达柏林酒店低于 20%，必须在中途补电。
+- **充电目标**：抵达酒店后使用地下车库 Wallbox 慢充补充电量。
+- **实时确认**：在车机导航中监控电量，并实时查看 Prignitz 快充站的使用状态。
 
 ---
 
 ## Hotel
-Address: Markgrafenstrasse 16–16a, Berlin 10969
+Address: Markgrafenstrasse 16-16a, Berlin 10969, Germany
 Parking: 酒店专属地下车库（收费25 EUR/天）。
-EV: 地下车库内配备EV充电桩（Wallbox）。 (酒店内或周边慢充)
+EV: 地下车库内配备EV充电桩（Wallbox）。
 Supermarket: Wolt Market (Markgrafenstraße 58, 距离约 100米) 或 EDEKA Checkpoint Charlie (Friedrichstraße 207-208, 约400米)。
 Pharmacy: Checkpoint Apotheke (Friedrichstraße 207, 约400米)。
 Hospital: Vivantes Klinikum Am Urban (Dieffenbachstraße 1, 距离约 2.5 km)。
@@ -76,15 +89,18 @@ Nearby Restaurant: 酒店周边有大量简餐、意式和德式餐厅（如 Ris
 ---
 
 ## Meals
-Breakfast: 酒店早餐
+
+Breakfast: 酒店内早餐
 Lunch: 途中服务区
-Dinner: 酒店周边 Ristorante A Mano 意式餐厅 柏林中餐厅或西餐厅
+Dinner: 酒店周边意式/德式餐厅
 Coffee: Espresso House Friedrichstraße
+
 ### 推荐餐厅 (Recommended Restaurants)
-- **Local Food**:
-  - **Schnitzelei Mitte** (Chausseestraße 8, Berlin Mitte): 提供高品质的德式大炸猪排（Wiener Schnitzel）以及德式传统冷盘小吃，环境现代舒适。
-- **Chinese/Asian Food**:
-  - **LIU Chengdu Weidao (刘成都味道)** (Kronenstraße 72, Berlin Mitte): 距离入住酒店很近，主打正宗四川担担面、红油抄手及小吃，味道惊艳。
+
+- **首选 (First Choice)**: **Ristorante A Mano** (Mitte 意式餐厅，意面和披萨更易被幼儿接受，且出餐迅速)。
+- **备选 (Backup)**: **LIU Chengdu Weidao (刘成都味道)** (Sichuan 担担面，为 Noora 单独安排不辣的面条/辅食)。
+- **最稳方案 (Safe Fallback)**: 酒店小厨房自制温馨简餐 (由于当天傍晚包含会议报到注册/欢迎活动，自制或外卖时间最灵活)。
+- **执行原则**：餐厅预约不是硬性节点。如果抵达延误或 Noora 疲劳，立即改为外带、超市采购或住宿简餐。
 
 ---
 
@@ -117,16 +133,16 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Expense
-- **住宿（Hotel）**: 已预订 (TODO 填写金额)
-- **充电（Charging）**: TODO
-- **餐饮（Food）**: TODO
-- **停车（Parking）**: TODO
-- **购物（Shopping）**: TODO
+- **住宿（Hotel）**: 已预订 (7140 NOK，6晚总计)
+- **充电（Charging）**: 预算：预计 28 EUR；实际：旅行中填写
+- **餐饮（Food）**: 预算：预计 80 EUR；实际：旅行中填写
+- **停车（Parking）**: 预算：25 EUR；实际：旅行中填写
+- **购物（Shopping）**: 预算：预计 50 EUR；实际：旅行中填写
 
 ---
 
 ## Journal
-- **精选照片（Best Photo）**: TODO
-- **今日回忆（Today's Memory）**: TODO
-- **趣味瞬间（Funny Moment）**: TODO
-- **Noora的新发现（Noora Learned）**: TODO
+- **精选照片（Best Photo）**: 旅行中填写
+- **今日回忆（Today's Memory）**: 旅行中填写
+- **趣味瞬间（Funny Moment）**: 旅行中填写
+- **Noora的新发现（Noora Learned）**: 旅行中填写

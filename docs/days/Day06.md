@@ -8,13 +8,13 @@ ICMCF Berlin 会议第一天。一人参加会议，另一人带 Noora 游览柏
 
 ## Dashboard
 - **日期（Date）**: 2026-07-27
-- **行驶距离（Driving Distance）**: 0 km (柏林市内公交/步行为主)
-- **行驶时间（Driving Time）**: 0 小时
-- **预计剩余电量（Expected SOC）**: 预计车辆处于停放充电/待机状态
-- **天气（Weather）**: 晴朗 (预计 22-26°C)
+- **行驶距离（Driving Distance）**: 城市内建议不开车，以 U-Bahn、S-Bahn 和步行为主，车辆停放酒店地下车库。
+- **行驶时间（Driving Time）**: 无 (车辆静置地下车库)
+- **预计剩余电量（Expected SOC）**: 电量维持在 50–80% 即可
+- **天气（Weather）**: 出发前 48 小时更新；当天早晨再次确认
 - **步行距离（Walking Distance）**: 约 5-7 km (柏林市区)
 - **入住酒店（Hotel）**: Berlin Hotel (Markgrafenstrasse 16–16a, Berlin 10969)
-- **停车场（Parking）**: 酒店停车场
+- **停车场（Parking）**: Mondrian Suites 地下车库
 - **办理入住（Check-in）**: N/A
 - **办理退房（Check-out）**: N/A
 - **今日亮点（Highlights）**: ICMCF Berlin 学术交流，柏林城市公园亲子游
@@ -37,7 +37,7 @@ ICMCF Berlin 会议第一天。一人参加会议，另一人带 Noora 游览柏
 ## Route
 驾车路线（Driving route）：无
 步行路线（Walking route）：Hotel → Tiergarten → Lunch Spot → Hotel
-地铁路线（Metro）：U-Bahn (TODO)
+地铁路线（Metro）：从 Kochstraße (靠近酒店) 搭乘 U6 至 Stadtmitte，换乘 U2 直达 Zoologischer Garten (动物园)
 
 ---
 
@@ -55,15 +55,29 @@ graph TD
 ---
 
 ## Charging
-Recommended charger: 酒店慢充或周边目的地充电桩 (TODO)
-Backup charger: N/A
-Arrival SOC: 75%
+
+Departure SOC: 50–80%
+
+Recommended charger:
+Mondrian 酒店地下车库 Wallbox (夜间慢充)
+
+Backup charger:
+附近 U-Bahn 站点周边公共充电桩
+
+Arrival SOC:
+50-80%
+
+### Charging decision rule
+
+- **切换条件**：日常出行车辆静置酒店车库，不安排任何快充。仅在 SOC 偏低时利用夜间闲暇在酒店地下车库慢充补电。
+- **充电目标**：仅在低于约 45–50% 时在酒店 Wallbox 充电，充至 80% 即可。
+- **实时确认**：在酒店前台确认车位 Wallbox 激活方式 和 收费标准。
 
 ---
 
 ## Hotel
-Address: Markgrafenstrasse 16–16a, Berlin 10969
-Parking: 酒店停车场
+Address: Markgrafenstrasse 16-16a, Berlin 10969, Germany
+Parking: 酒店专属地下车库（收费25 EUR/天）。
 EV: 地下车库内配备EV充电桩（Wallbox）。
 Supermarket: Wolt Market (Markgrafenstraße 58, 距离约 100米) 或 EDEKA Checkpoint Charlie (Friedrichstraße 207-208, 约400米)。
 Pharmacy: Checkpoint Apotheke (Friedrichstraße 207, 约400米)。
@@ -75,15 +89,18 @@ Nearby Restaurant: 酒店周边有大量简餐、意式和德式餐厅（如 Ris
 ---
 
 ## Meals
-Breakfast: 酒店早餐
-Lunch: TODO
-Dinner: Checkpoint Charlie 附近德式猪肘餐馆
+
+Breakfast: 酒店内
+Lunch: 景点周边就近简餐
+Dinner: 酒店附近特色餐厅 / 小厨房自制
 Coffee: 柏林动物园内咖啡厅
+
 ### 推荐餐厅 (Recommended Restaurants)
-- **Local Food**:
-  - **Max und Moritz** (Oranienstraße 162, Berlin Kreuzberg): 始于 1902 年的百年老店，原汁原味的旧柏林酒馆风格，提供经典德式肉丸（Königsberger Klopse）和脆皮烤猪肘。
-- **Chinese/Asian Food**:
-  - **Wen Cheng Handpulled Noodles (温城大面)** (Tempelhofer Ufer 36, Berlin Kreuzberg): 柏林爆火的手拉裤带面，配以香辣泼油，非常适合带娃在 Kreuzberg 活动后前往。
+
+- **首选 (First Choice)**: **Mondrian 酒店小厨房自制** / 附近高品质意面披萨店 (最符合带幼儿作息，晚餐灵活度极高)。
+- **备选 (Backup)**: **LIU Chengdu Weidao (刘成都味道)** / **Peking Ente Berlin (北京烤鸭店)** (中餐备选)；**Max und Moritz** (德餐备选)。
+- **最稳方案 (Safe Fallback)**: 外卖或 Wolt Market 超市采购后在酒店房间用餐，保障 Noora 20:00 准时入睡。
+- **执行原则**：餐厅预约不是硬性节点。如果抵达延误或 Noora 疲劳，立即改为外带、超市采购或住宿简餐。
 
 ---
 
@@ -124,16 +141,16 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Expense
-- **住宿（Hotel）**: 已预订 (TODO 填写金额)
-- **充电（Charging）**: TODO
-- **餐饮（Food）**: TODO
-- **停车（Parking）**: TODO
-- **购物（Shopping）**: TODO
+- **住宿（Hotel）**: 已预订 (0 NOK，已计入第五天)
+- **充电（Charging）**: 预算：预计 15 EUR；实际：旅行中填写
+- **餐饮（Food）**: 预算：预计 90 EUR；实际：旅行中填写
+- **停车（Parking）**: 预算：25 EUR；实际：旅行中填写
+- **购物（Shopping）**: 预算：预计 20 EUR；实际：旅行中填写
 
 ---
 
 ## Journal
-- **精选照片（Best Photo）**: TODO
-- **今日回忆（Today's Memory）**: TODO
-- **趣味瞬间（Funny Moment）**: TODO
-- **Noora的新发现（Noora Learned）**: TODO
+- **精选照片（Best Photo）**: 旅行中填写
+- **今日回忆（Today's Memory）**: 旅行中填写
+- **趣味瞬间（Funny Moment）**: 旅行中填写
+- **Noora的新发现（Noora Learned）**: 旅行中填写

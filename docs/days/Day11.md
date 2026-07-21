@@ -8,15 +8,15 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-08-01
-- **行驶距离（Driving Distance）**: 约 360 km
-- **行驶时间（Driving Time）**: 约 3.8 小时
-- **预计剩余电量（Expected SOC）**: 出发 90%+ -> 抵达 30%
-- **天气（Weather）**: 晴朗 (预计 19-24°C)
+- **行驶距离（Driving Distance）**: 约 355 km
+- **行驶时间（Driving Time）**: 约 3小时45分纯驾驶；含午餐、充电和幼儿休息，建议按5小时预留
+- **预计剩余电量（Expected SOC）**: 建议 90–95% 出发 → 预计抵达 Neumünster SOC: 25–40% (在 Outlet 购物充电后约 70–80%)
+- **天气（Weather）**: 出发前 48 小时更新；当天早晨再次确认
 - **步行距离（Walking Distance）**: 约 2-3 km (Neumünster 城区/Outlet)
 - **入住酒店（Hotel）**: Neumünster Hotel (Max-Johannsen-Brücke 1, Neumünster 24537)
 - **停车场（Parking）**: Hotel Prisma 专属免费停车场
 - **办理入住（Check-in）**: 15:00
-- **办理退房（Check-out）**: 09:30 前退房 (Berlin Hotel)
+- **办理退房（Check-out）**: 11:00
 - **今日亮点（Highlights）**: Neumünster Designer Outlet 购物补给，田园风光
 
 ---
@@ -55,15 +55,28 @@ graph TD
 ---
 
 ## Charging
-Departure SOC: 90%+
-Recommended charger: **Tesla Supercharger Neumünster** (Oderstraße 10, 24539 Neumünster - 位于 Designer Outlet 停车场内，可边买东西边完成 Kona EV 的高功率补电)
-Backup charger: 途中 Hamburg 附近的 IONITY/Recharge 充电站
-Arrival SOC: 75% (包含充电后电量)
+
+Departure SOC: 90–95%
+
+Recommended charger:
+Tesla Supercharger Wittenburg (途中超充) 及 Neumünster Designer Outlet 停车场内 Tesla 充电桩
+
+Backup charger:
+Wittenburg 沿线快充站 或 Neumünster 城区快充
+
+Arrival SOC:
+25–40% (Outlet充电前) / 70–80% (Outlet充电后)
+
+### Charging decision rule
+
+- **切换条件**：如果导航预测抵达 Neumünster Outlet 充电站低于 15%，应在途中 Wittenburg 提前补充 15 分钟。
+- **充电目标**：在 Wittenburg 途中充至 75% 左右，到达 Outlet 后利用购物时间通过 Tesla 快充补电至 80% 左右。
+- **实时确认**：出发前确认 Wittenburg 和 Neumünster Supercharger 的枪头占用和收费情况。
 
 ---
 
 ## Hotel
-Address: Max-Johannsen-Brücke 1, Neumünster 24537
+Address: Max-Johannsen-Brücke 1, Neumünster 24537, Germany
 Parking: 酒店专属免费停车场。
 EV: 酒店内部配备EV充电桩。
 Supermarket: Aldi Nord (Rendsburger Str. 90) 或 Lidl (Rendsburger Str. 84, 距离约 1.2 km)。
@@ -76,15 +89,18 @@ Nearby Restaurant: 酒店内 Campino's 餐厅，提供北德特色菜。
 ---
 
 ## Meals
-Breakfast: 酒店早餐
-Lunch: 途中充电服务区
+
+Breakfast: 酒店自理
+Lunch: 途中服务区
 Dinner: Hotel Prisma 内 Campino's 德式特色餐厅
 Coffee: Designer Outlet 购物区内星巴克/咖啡厅
+
 ### 推荐餐厅 (Recommended Restaurants)
-- **Local Food**:
-  - **Postkeller** (Großflecken 34, Neumünster): 位于市中心广场，提供正宗汉堡/北德风味肉食、新鲜啤酒和舒适的阳光露台。
-- **Chinese/Asian Food**:
-  - **China-Restaurant "Shanghai"** (Plöner Str. 11, Neumünster): 诺伊明斯特本地口碑极佳的中餐厅，提供铁板牛肉和香酥鸭等经典菜式。
+
+- **首选 (First Choice)**: **Hotel Prisma 内 Campino's 餐厅** (入住后直接在酒店餐厅享用丰盛的北德特色晚餐，省去抱疲劳孩子到处找餐厅的麻烦)。
+- **备选 (Backup)**: **Designer Outlet 内部餐饮区** (仅在购物按计划顺利进行、全家状态极佳时使用，不安排市中心正式晚餐)。
+- **最稳方案 (Safe Fallback)**: 酒店附近 Aldi Nord/Lidl 采购面包、生鲜及辅食回房间用晚餐。
+- **执行原则**：餐厅预约不是硬性节点。如果抵达延误或 Noora 疲劳，立即改为外带、超市采购或住宿简餐。
 
 ---
 
@@ -114,16 +130,16 @@ N/A
 ---
 
 ## Expense
-- **住宿（Hotel）**: 已预订 (TODO 填写金额)
-- **充电（Charging）**: TODO
-- **餐饮（Food）**: TODO
-- **停车（Parking）**: TODO
-- **购物（Shopping）**: TODO
+- **住宿（Hotel）**: 已预订 (1106 NOK)
+- **充电（Charging）**: 预算：预计 35 EUR；实际：旅行中填写
+- **餐饮（Food）**: 预算：预计 80 EUR；实际：旅行中填写
+- **停车（Parking）**: 预算：免费；实际：旅行中填写
+- **购物（Shopping）**: 预算：预计 200 EUR；实际：旅行中填写
 
 ---
 
 ## Journal
-- **精选照片（Best Photo）**: TODO
-- **今日回忆（Today's Memory）**: TODO
-- **趣味瞬间（Funny Moment）**: TODO
-- **Noora的新发现（Noora Learned）**: TODO
+- **精选照片（Best Photo）**: 旅行中填写
+- **今日回忆（Today's Memory）**: 旅行中填写
+- **趣味瞬间（Funny Moment）**: 旅行中填写
+- **Noora的新发现（Noora Learned）**: 旅行中填写

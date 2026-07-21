@@ -8,15 +8,15 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-07-24
-- **行驶距离（Driving Distance）**: 约 140 km (丹麦路段)
-- **行驶时间（Driving Time）**: 约 2 小时 (丹麦路段)
-- **预计剩余电量（Expected SOC）**: 出发 95% -> 抵达 40%
-- **天气（Weather）**: 多云有微风 (预计 17-21°C)
+- **行驶距离（Driving Distance）**: 约 185 km 丹麦陆地驾驶 (轮渡航程单独计算，不计入陆地距离)
+- **行驶时间（Driving Time）**: 约 2小时10分纯驾驶；含下船、午餐和幼儿休息，建议按3.5小时预留 (不含轮渡航行时间)
+- **预计剩余电量（Expected SOC）**: 建议 95% 出发 → 预计 45–60% 抵达
+- **天气（Weather）**: 出发前 48 小时更新；当天早晨再次确认
 - **步行距离（Walking Distance）**: 约 2-3 km (Silkeborg市中心)
 - **入住酒店（Hotel）**: Silkeborg Airbnb (Slienvej 51, Silkeborg 8600)
 - **停车场（Parking）**: Slienvej 51 专属免费停车位
 - **办理入住（Check-in）**: 15:00
-- **办理退房（Check-out）**: 07:00 前退房 (Kristiansand Airbnb)
+- **办理退房（Check-out）**: 11:00
 - **今日亮点（Highlights）**: Color Line 海上航行，丹麦田园风光
 
 ---
@@ -41,7 +41,7 @@
 ## Route
 驾车路线（Driving route）：Kristiansand Airbnb → Ferry Terminal → (Ferry) → Hirtshals Port → E39 → Silkeborg (Slienvej 51)
 步行路线（Walking route）：约 2-3 km (Silkeborg市中心)
-停车（Parking）：Ferry 舱内停车，Slienvej 51 停车位 (TODO)
+停车（Parking）：Slienvej 51 专属免费停车位
 
 ---
 
@@ -59,15 +59,28 @@ graph TD
 ---
 
 ## Charging
-Departure SOC: 90%+
-Recommended charger: 丹麦 Hirtshals 港口周边或前往 Silkeborg 途中的 Tesla/IONITY 充电站 (TODO)
-Backup charger: Norlys Silkeborg (Søtorvet) 快速充电站
-Arrival SOC: 45%
+
+Departure SOC: 95%
+
+Recommended charger:
+Silkeborg 住宿周边 REMA 1000 Gødvad Clever 充电桩或快充桩
+
+Backup charger:
+Aalborg 或 Hobro 沿线充电区域
+
+Arrival SOC:
+45–60%
+
+### Charging decision rule
+
+- **切换条件**：如果下船后导航预测抵达 Silkeborg 住宿低于 25%，则在途中 Aalborg 或 Hobro 提前充电 10–15 分钟。
+- **充电目标**：途中补电仅需充至能够安全抵达目的地的 SOC 即可，抵达 Silkeborg 后再慢充充满。
+- **实时确认**：出发前通过 Clever / Norlys App 确认沿线及目的地充电桩的占用情况和可用状态。
 
 ---
 
 ## Hotel
-Address: Slienvej 51, Silkeborg 8600
+Address: Slienvej 51, Silkeborg 8600, Denmark
 Parking: 房屋前私人专用免费停车位。
 EV: 房屋不带充电桩，可使用Gødvad或市区Clever/Norlys公共充电桩。
 Supermarket: REMA 1000 Gødvad (Arendalsvej 29, 距离约 1.0 km)。
@@ -80,16 +93,18 @@ Nearby Restaurant: Silkeborg 市中心餐馆（如 Cafe Evald 或 Babas Pizza）
 ---
 
 ## Meals
-Breakfast: Color Line 轮渡早餐
-Lunch: 途中充电服务区午餐
+
+Breakfast: Airbnb 内自制
+Lunch: 轮渡上简餐
 Dinner: Silkeborg 市区 Cafe Evald 德式/丹麦简餐
-Coffee: Color Line 轮渡上咖啡或 Silkeborg 咖啡馆
+Coffee: 轮渡咖啡厅或 Silkeborg 咖啡馆
+
 ### 推荐餐厅 (Recommended Restaurants)
-- **Local Food**:
-  - **Cafe Evald** (Papirfabrikken 10, Silkeborg): 坐落在运河边的纸厂旧址，提供高品质的丹麦三明治（Smørrebrød）及本地简餐。
-  - **Svostrup Kro** (Svostrupvej 58, Silkeborg): 运河畔极具历史感的古老丹麦客栈餐厅，主打传统丹麦经典菜肴。
-- **Chinese/Asian Food**:
-  - **Restaurant King Buffet** (Borgergade 12, Silkeborg): 经典的亚洲中式自助餐厅，提供寿司、热菜及蒙古铁板烧，分量充足。
+
+- **首选 (First Choice)**: **Cafe Evald** (Papirfabrikken 10, Silkeborg, 适合较早的晚餐，出餐快，环境对孩子友好)。
+- **备选 (Backup)**: Silkeborg 市中心披萨店或外带餐厅。
+- **最稳方案 (Safe Fallback)**: REMA 1000 Gødvad (距离住宿 1km) 采购食材，回 Airbnb 自制简餐。
+- **执行原则**：餐厅预约不是硬性节点。如果抵达延误或 Noora 疲劳，立即改为外带、超市采购或住宿简餐。
 
 ---
 
@@ -119,16 +134,16 @@ N/A
 ---
 
 ## Expense
-- **住宿（Hotel）**: 已预订 (TODO 填写金额)
-- **充电（Charging）**: TODO
-- **餐饮（Food）**: TODO
-- **停车（Parking）**: TODO
-- **购物（Shopping）**: TODO
+- **住宿（Hotel）**: 已预订 (810 DKK)
+- **充电（Charging）**: 预算：预计 120 DKK；实际：旅行中填写
+- **餐饮（Food）**: 预算：预计 400 DKK；实际：旅行中填写
+- **停车（Parking）**: 预算：免费；实际：旅行中填写
+- **购物（Shopping）**: 预算：预计 100 DKK；实际：旅行中填写
 
 ---
 
 ## Journal
-- **精选照片（Best Photo）**: TODO
-- **今日回忆（Today's Memory）**: TODO
-- **趣味瞬间（Funny Moment）**: TODO
-- **Noora的新发现（Noora Learned）**: TODO
+- **精选照片（Best Photo）**: 旅行中填写
+- **今日回忆（Today's Memory）**: 旅行中填写
+- **趣味瞬间（Funny Moment）**: 旅行中填写
+- **Noora的新发现（Noora Learned）**: 旅行中填写
