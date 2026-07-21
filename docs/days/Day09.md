@@ -110,7 +110,16 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Conference
-ICMCF Berlin 会议日程 (TODO)
+- **时间**: 08:50 - 17:00 (学术日程)
+- **今日日程**:
+  - **08:50 - 10:50**: Keynote & 口头报告 (Oral Sessions)
+  - **10:50 - 11:20**: 茶歇 (Coffee-Break)
+  - **11:20 - 12:20**: 全体大会 (Plenary Session - Environmental considerations, biosecurity and regulatory aspects) & 主旨演讲 (Keynote) & 口头报告 (Oral Session)
+  - **12:20 - 13:50**: 午餐与交流 (Lunch Break)
+  - **13:50 - 15:40**: 口头报告 (Oral Sessions)
+  - **15:40 - 16:10**: 茶歇 (Coffee-Break)
+  - **16:10**: 大会第一阶段结束 (Hui Cheng 提前离场，16:15 与家人在国会大厦会合，准备 17:00 的国会大厦导览游)
+- **相关文档**: 📄 [ICMCF 2026 Preliminary Programme](assets/ICMCF2026-Preliminary-Programme_06-29.pdf)
 
 ---
 

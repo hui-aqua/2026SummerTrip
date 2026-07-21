@@ -99,7 +99,10 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Conference
-N/A (ICMCF Berlin 会议前夕注册/踩点)
+- **时间**: 17:30 - 20:30
+- **内容**: 报到注册与欢迎宴会 (Registration and Welcome Reception)
+- **地点**: Henry Ford Building - Entrance Hall (Freie Universität Berlin)
+- **相关文档**: 📄 [ICMCF 2026 Preliminary Programme](assets/ICMCF2026-Preliminary-Programme_06-29.pdf)
 
 ---
 

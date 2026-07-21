@@ -98,7 +98,18 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Conference
-ICMCF Berlin 大会日程 (TODO 待补全)
+- **时间**: 08:50 - 17:00 (学术日程) & 18:00 - 21:00 (学生之夜)
+- **今日日程**:
+  - **08:50 - 09:00**: 大会开幕式 (Opening Ceremony)
+  - **09:00 - 10:20**: 全体大会 (Plenary Session - Sophie Leterme / Flinders University) & 口头报告 (Oral Session)
+  - **10:30 - 11:00**: 茶歇 (Coffee-Break)
+  - **11:00 - 12:20**: 主旨演讲 (Keynote) & 口头报告 (Oral Session)
+  - **12:20 - 13:50**: 午餐与交流 (Lunch Break)
+  - **13:50 - 15:30**: 主旨演讲 (Keynote) & 口头报告 (Oral Session)
+  - **15:40 - 16:10**: 茶歇 (Coffee-Break)
+  - **16:10 - 17:00**: 口头报告 (Oral Session)
+  - **18:00 - 21:00**: 学生之夜 (Student Night)
+- **相关文档**: 📄 [ICMCF 2026 Preliminary Programme](assets/ICMCF2026-Preliminary-Programme_06-29.pdf)
 
 ---
 

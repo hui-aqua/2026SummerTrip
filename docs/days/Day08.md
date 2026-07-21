@@ -23,14 +23,13 @@
 
 ## Timeline
 08:00 | Noora 起床与早餐
-09:00 | 妈妈带 Noora 游览酒店周边小巷，或者附近的儿童图书馆
-12:00 | 在博物馆岛附近会合，全家一起午餐
+09:00 | 妈妈带 Noora 游览酒店周边小巷，或者附近的儿童图书馆；爸爸参加会议学术报告
+12:10 | 学术会议半天结束，全家在博物馆岛附近会合午餐
 12:30 | Noora 婴儿车上午睡，爸妈散步喝咖啡
-14:30 | 散步至 Lustgarten (卢斯特花园) 大草坪，Noora 晒太阳爬草地
-16:00 | 游览柏林大教堂周边（不登顶，婴儿车不便）
-17:30 | 慢步回酒店或乘 U-Bahn 回去
-18:00 | 晚餐
-20:00 | Noora 睡觉时间
+14:00 | 参加大会组织的社交游览活动 (ICMCF Social Excursion, 约 14:00 - 17:00)
+17:30 | 结束出游，返回酒店稍作休息，为晚宴准备
+18:30 | 出门前往大会晚宴会场
+19:00 | 大会正式晚宴开始 (Congress Dinner, 19:00 - 23:00)；Noora 备用静音耳罩，预计在晚宴中婴儿车上入睡
 
 ---
 
@@ -77,7 +76,7 @@ Nearby Restaurant: 酒店周边有大量简餐、意式和德式餐厅（如 Ris
 ## Meals
 Breakfast: 酒店早餐
 Lunch: 博物馆岛附近德餐或意大利面
-Dinner: 酒店附近中餐馆 (如大明酒家)
+Dinner: 大会晚宴 (ICMCF Congress Dinner)
 Coffee: Five Elephant Mitte 咖啡与芝士蛋糕
 ### 推荐餐厅 (Recommended Restaurants)
 - **Local Food**:
@@ -98,7 +97,14 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Conference
-ICMCF Berlin 会议日程 (半天会议/海报展示，下午自由社交) (TODO)
+- **时间**: 08:50 - 12:10 (半天学术日程) & 14:00 - 17:00 (出游) & 19:00 - 23:00 (晚宴)
+- **今日日程**:
+  - **08:50 - 10:50**: 全体大会 (Plenary Session - Ralitsa Mihailova / Safinah Group) & 主旨演讲 (Keynote) & 口头报告 (Oral Session)
+  - **10:50 - 11:20**: 茶歇 (Coffee-Break)
+  - **11:20 - 12:10**: 口头报告 (Oral Session)
+  - **12:10 onwards**: 下午社交活动与出游活动 (Social Events & Afternoon Excursion)
+  - **19:00 - 23:00**: 大会晚宴 (Congress Dinner 🥂)
+- **相关文档**: 📄 [ICMCF 2026 Preliminary Programme](assets/ICMCF2026-Preliminary-Programme_06-29.pdf)
 
 ---
 
