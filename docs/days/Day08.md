@@ -8,13 +8,13 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-07-29
-- **行驶距离（Driving Distance）**: 0 km
-- **行驶时间（Driving Time）**: 0 小时
-- **预计剩余电量（Expected SOC）**: 电量维持 50%-80%
-- **天气（Weather）**: 晴间多云 (预计 23-27°C)
+- **行驶距离（Driving Distance）**: 城市内建议不开车，以 U-Bahn、S-Bahn 和步行为主，车辆停放酒店地下车库。
+- **行驶时间（Driving Time）**: 无 (车辆静置地下车库)
+- **预计剩余电量（Expected SOC）**: 电量维持在 50–80% 即可
+- **天气（Weather）**: 出发前 48 小时更新；当天早晨再次确认
 - **步行距离（Walking Distance）**: 约 5-8 km
 - **入住酒店（Hotel）**: Berlin Hotel (Markgrafenstrasse 16–16a, Berlin 10969)
-- **停车场（Parking）**: 酒店停车场
+- **停车场（Parking）**: Mondrian Suites 地下车库
 - **办理入住（Check-in）**: N/A
 - **办理退房（Check-out）**: N/A
 - **今日亮点（Highlights）**: 全家会合，斯普雷河散步，博物馆岛外观
@@ -36,7 +36,7 @@
 ## Route
 驾车路线（Driving route）：无
 步行路线（Walking route）：Hotel → Museum Island → Lustgarten → Hotel
-地铁/轻轨（Metro/S-Bahn）：TODO
+地铁/轻轨（Metro/S-Bahn）：搭乘 U-Bahn/S-Bahn 往返博物馆岛与晚宴会场
 
 ---
 
@@ -54,15 +54,29 @@ graph TD
 ---
 
 ## Charging
-Recommended charger: Mondrian 酒店地下车库 Wallbox
-Backup charger: Mitte区公共充电站点
-Arrival SOC: 65%
+
+Departure SOC: 50–80%
+
+Recommended charger:
+Mondrian 酒店地下车库 Wallbox (慢充)
+
+Backup charger:
+Mitte区公共充电站点
+
+Arrival SOC:
+50-80%
+
+### Charging decision rule
+
+- **切换条件**：日常出行车辆静置酒店车库，不安排任何快充。仅在 SOC 偏低时利用夜间闲暇在酒店地下车库慢充补电。
+- **充电目标**：在酒店 Wallbox 夜间慢充至 70–80% 即可。
+- **实时确认**：日常无需特别确认快充桩。
 
 ---
 
 ## Hotel
-Address: Markgrafenstrasse 16–16a, Berlin 10969
-Parking: 酒店停车场
+Address: Markgrafenstrasse 16-16a, Berlin 10969, Germany
+Parking: 酒店专属地下车库（收费25 EUR/天）。
 EV: 地下车库内配备EV充电桩（Wallbox）。
 Supermarket: Wolt Market (Markgrafenstraße 58, 距离约 100米) 或 EDEKA Checkpoint Charlie (Friedrichstraße 207-208, 约400米)。
 Pharmacy: Checkpoint Apotheke (Friedrichstraße 207, 约400米)。
@@ -74,15 +88,18 @@ Nearby Restaurant: 酒店周边有大量简餐、意式和德式餐厅（如 Ris
 ---
 
 ## Meals
+
 Breakfast: 酒店早餐
-Lunch: 博物馆岛附近德餐或意大利面
+Lunch: 博物馆岛附近德餐或个人面食
 Dinner: 大会晚宴 (ICMCF Congress Dinner)
 Coffee: Five Elephant Mitte 咖啡与芝士蛋糕
+
 ### 推荐餐厅 (Recommended Restaurants)
-- **Local Food**:
-  - **Trio** (Linienstraße 208, Berlin Mitte): 本地极高评分的现代德餐馆，提供精致的传统德式丸子和季节性北德菜，需要提前预订。
-- **Chinese/Asian Food**:
-  - **Sanku Maots’ai (三库冒菜)** (Mitte / 附近): 特色四川自选冒菜和手擀面，汤底香辣浓郁，适合自由度较高的学术休会日尝鲜。
+
+- **首选 (First Choice)**: **大会正式晚宴 (Congress Dinner)** (Noora 备用静音耳罩，预计在晚宴中婴儿车上入睡)。
+- **备选 (Backup)**: **LIU Chengdu Weidao (刘成都味道)** / 附近中餐馆 (如大明酒家，仅在不参加晚宴时考虑)。
+- **最稳方案 (Safe Fallback)**: 外卖或 Wolt Market 超市采购后在酒店房间用餐，保障 Noora 20:00 准时入睡。
+- **执行原则**：餐厅预约不是硬性节点。如果抵达延误或 Noora 疲劳，立即改为外带、超市采购或住宿简餐。
 
 ---
 
@@ -119,16 +136,16 @@ Sleep: 20:00 准时入睡
 ---
 
 ## Expense
-- **住宿（Hotel）**: 已预订 (TODO 填写金额)
-- **充电（Charging）**: TODO
-- **餐饮（Food）**: TODO
-- **停车（Parking）**: TODO
-- **购物（Shopping）**: TODO
+- **住宿（Hotel）**: 已预订 (0 NOK，已计入第五天)
+- **充电（Charging）**: 预算：预计 10 EUR；实际：旅行中填写
+- **餐饮（Food）**: 预算：预计 100 EUR；实际：旅行中填写
+- **停车（Parking）**: 预算：25 EUR；实际：旅行中填写
+- **购物（Shopping）**: 预算：预计 30 EUR；实际：旅行中填写
 
 ---
 
 ## Journal
-- **精选照片（Best Photo）**: TODO
-- **今日回忆（Today's Memory）**: TODO
-- **趣味瞬间（Funny Moment）**: TODO
-- **Noora的新发现（Noora Learned）**: TODO
+- **精选照片（Best Photo）**: 旅行中填写
+- **今日回忆（Today's Memory）**: 旅行中填写
+- **趣味瞬间（Funny Moment）**: 旅行中填写
+- **Noora的新发现（Noora Learned）**: 旅行中填写

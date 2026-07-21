@@ -28,9 +28,16 @@ confirmed:
   route: true
 
 todo:
-  maps: false
-  routing: false
-  restaurants: false
-  charging: false
-  weather: false
-  budget: false
+  maps: true
+  routing: true
+  restaurants: true
+  charging: true
+  weather: dynamic
+  budget: true
+  journal: travel_input
+maps: true
+maps: true
+maps: true
+maps: true
+maps: true
+maps: false

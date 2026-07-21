@@ -8,15 +8,15 @@
 
 ## Dashboard
 - **日期（Date）**: 2026-07-25
-- **行驶距离（Driving Distance）**: 约 340 km (TODO 确认实际行驶里程)
-- **行驶时间（Driving Time）**: 3.5 小时
-- **预计剩余电量（Expected SOC）**: 出发 SOC: 90% -> 抵达 SOC: TODO
-- **天气（Weather）**: 晴转多云 (预计 19-23°C)
+- **行驶距离（Driving Distance）**: 约 348 km
+- **行驶时间（Driving Time）**: 约 3小时45分纯驾驶；含午餐、充电 and 幼儿休息，建议按5–5.5小时预留
+- **预计剩余电量（Expected SOC）**: 建议 90–95% 出发 → 预计 25–40% 抵达 (中途充电一次)
+- **天气（Weather）**: 出发前 48 小时更新；当天早晨再次确认
 - **步行距离（Walking Distance）**: 约 2-4 km (吕贝克老城)
 - **入住酒店（Hotel）**: Lübeck Hotel (Herrendamm 2-4, Lübeck, SH 23556)
 - **停车场（Parking）**: Hotel Leano 专属收费停车场 (10 EUR/天)
 - **办理入住（Check-in）**: 15:00
-- **办理退房（Check-out）**: 09:30 前退房 (Silkeborg Airbnb)
+- **办理退房（Check-out）**: 10:00
 - **今日亮点（Highlights）**: 跨国边境行车，Lübeck 汉萨同盟中世纪老城建筑
 
 ---
@@ -37,7 +37,7 @@
 ## Route
 驾车路线（Driving route）：Silkeborg → E45 → 边境 → A7/A21/A1 → Lübeck (Herrendamm 2-4)
 步行路线（Walking route）：约 2-4 km (吕贝克老城) 酒店至 Holstentor 步行路线
-停车（Parking）：Herrendamm 2-4 酒店停车场 (TODO)
+停车（Parking）：Hotel Leano 专属收费停车场 (10 EUR/天)
 
 ---
 
@@ -55,15 +55,28 @@ graph TD
 ---
 
 ## Charging
-Departure SOC: 90%+
-Recommended charger: 丹德边境 Flensburg 充电站 (TODO)
-Backup charger: Allego Lübeck Bei der Lohmühle 11A (150kW)
-Arrival SOC: 30%
+
+Departure SOC: 90–95%
+
+Recommended charger:
+IONITY Hüttener Berge Ost 快充站 (目标充至 75–80%)
+
+Backup charger:
+Flensburg/Harrislee CCS 快充站 (途中备用) 及 Lübeck Bei der Lohmühle 快充站
+
+Arrival SOC:
+25–40%
+
+### Charging decision rule
+
+- **切换条件**：若导航预测抵达主充电站低于 12–15%，应在 Flensburg/Harrislee 提前补电。
+- **充电目标**：途中通常充至 75–80%，避免高 SOC 阶段充电速度急剧下降。
+- **实时确认**：出发前通过 IONITY App 确认充电桩状态，并检查吕贝克 Bei der Lohmühle 桩的空闲状态。
 
 ---
 
 ## Hotel
-Address: Herrendamm 2-4, Lübeck, SH 23556
+Address: Herrendamm 2-4, Lübeck, SH 23556, Germany
 Parking: 酒店专属收费停车场（10 EUR/天）。
 EV: 酒店内配备EV充电站，或使用附近超充站（Bei der Lohmühle 11A）。
 Supermarket: CITTI-PARK Lübeck (Herrenholz 14, 距离约 3.0 km，大型购物中心内有Aldi和Rewe)。
@@ -76,16 +89,18 @@ Nearby Restaurant: 酒店自带餐厅，提供德式及意式菜肴。
 ---
 
 ## Meals
-Breakfast: Airbnb 自制早餐
-Lunch: 边境充电服务区
-Dinner: 酒店 Campino's 餐厅或吕贝克老城区地道餐馆
-Coffee: 老城区 Niederegger Cafe 咖啡与杏仁糖甜点
+
+Breakfast: Airbnb 内自制
+Lunch: 途中充电服务区
+Dinner: 酒店餐厅或附近外带
+Coffee: Café Niederegger (吕贝克老城区，仅限时间宽裕时前往)
+
 ### 推荐餐厅 (Recommended Restaurants)
-- **Local Food**:
-  - **Schiffergesellschaft** (Breite Str. 2, Lübeck): 吕贝克最著名的历史地标级餐厅，始于16世纪，提供正宗北德水手风味（如鲱鱼、煎鱼和北德炖肉）。
-  - **Fangfrisch** (An der Untertrave 51, Lübeck): 运河旁的现代鱼类小馆，食材非常新鲜，主打各类本地煎鱼和海鲜三明治。
-- **Chinese/Asian Food**:
-  - **Shanghai-Restaurant** (Koberg 6, Lübeck): 开业于 1966 年，是吕贝克历史最悠久的中餐厅，口味正宗，环境雅致。
+
+- **首选 (First Choice)**: **Café Niederegger** (Breite Str. 89, Lübeck, 如果 16:30 前顺利入住，可以去老城区品尝标志性杏仁糖蛋糕和咖啡)；若入住较晚，首选酒店内部餐厅或外带。
+- **备选 (Backup)**: **Schiffergesellschaft** (吕贝克老城历史餐厅，适合体验古朴德式风情，需早抵达)。
+- **最稳方案 (Safe Fallback)**: 酒店 Prisma 内 Campino's 德式特色餐厅或外带。如果入住时间晚于 17:00，则直接取消老城区晚餐行程。
+- **执行原则**：餐厅预约不是硬性节点。如果抵达延误或 Noora 疲劳，立即改为外带、超市采购或住宿简餐。
 
 ---
 
@@ -115,16 +130,16 @@ N/A
 ---
 
 ## Expense
-- **住宿（Hotel）**: 已预订 (TODO 填写金额)
-- **充电（Charging）**: TODO
-- **餐饮（Food）**: TODO
-- **停车（Parking）**: TODO
-- **购物（Shopping）**: TODO
+- **住宿（Hotel）**: 已预订 (1466 NOK)
+- **充电（Charging）**: 预算：预计 35 EUR；实际：旅行中填写
+- **餐饮（Food）**: 预算：预计 70 EUR；实际：旅行中填写
+- **停车（Parking）**: 预算：10 EUR；实际：旅行中填写
+- **购物（Shopping）**: 预算：预计 30 EUR；实际：旅行中填写
 
 ---
 
 ## Journal
-- **精选照片（Best Photo）**: TODO
-- **今日回忆（Today's Memory）**: TODO
-- **趣味瞬间（Funny Moment）**: TODO
-- **Noora的新发现（Noora Learned）**: TODO
+- **精选照片（Best Photo）**: 旅行中填写
+- **今日回忆（Today's Memory）**: 旅行中填写
+- **趣味瞬间（Funny Moment）**: 旅行中填写
+- **Noora的新发现（Noora Learned）**: 旅行中填写

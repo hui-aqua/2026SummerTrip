@@ -19,7 +19,7 @@
 - **地址**：[Marikåpeveien 47, Kristiansand, Agder 4634](https://www.google.com/maps/search/?api=1&query=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634) ([Apple Map](https://maps.apple.com/?q=Marik%C3%A5peveien+47%2C+Kristiansand%2C+Agder+4634))
 - **概述（Overview）**：位于Justneshalvøya半岛的现代住宅，环境优美安静，非常适合家庭入住。靠近湖泊与森林步道。
 - **停车（Parking）**：房屋自带专用免费停车位（Private driveway parking）。
-- **EV充电（EV Charging）**：房屋未确认充电桩（TODO），但附近Rona和Sørlandsparken有大量超级充电桩。
+- **EV充电（EV Charging）**：房屋未配备或尚未确认专属充电桩，但附近 Rona 和 Sørlandsparken 有大量超级充电桩。
 - **周边超市（Nearby Supermarket）**：Joker Justvik (Grostølveien 4D, 距离约 1.2 km，步行15分钟)。
 - **周边药店（Nearby Pharmacy）**：Apotek 1 Rona (Rona 8-10, 距离约 2.8 km，车程5分钟)。
 - **周边医院（Nearby Hospital）**：Sørlandet Sykehus Kristiansand (Egsveien 100, 距离约 6.5 km，车程10分钟)。
