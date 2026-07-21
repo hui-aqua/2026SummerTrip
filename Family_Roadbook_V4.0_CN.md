@@ -1381,6 +1381,16 @@ ICMCF Berlin 会议日程 (半天会议/海报展示，下午自由社交) (TODO
 ## Today's Goal
 避开人潮，在勃兰登堡门周边平稳漫步，确保 Noora 在下午有充足且安静的睡眠时间。
 
+> [!IMPORTANT]
+> **国会大厦预约信息 (German Bundestag Booking)**
+> - **预约编号 (Booking Number)**: `SYS-20260611-214020`
+> - **活动时间 (Time)**: 2026-07-30 17:00 (请提前 30 分钟即 **16:30** 抵达西门接待中心 West Portal Welcome Centre)
+> - **注意事项**: 所有 16 岁以上访客必须携带**带照片的有效身份证或护照 (Photo ID)**进行安检。
+> - **相关确认文档 (Hyperlinks)**:
+>   - 📄 [国会大厦预约确认单 (Booking Confirmation)](assets/German%20Bundestag/SYS-20260611-214020-Buchungsbestaetigung.pdf)
+>   - 📄 [参会人员名单登记表 (List of Participants)](assets/German%20Bundestag/List%20of%20participants%20form%20filled.pdf)
+>   - 📄 [国会大厦访客安全须知 (Information for Visitors)](assets/German%20Bundestag/Information%20for%20Visitors.pdf)
+
 ## Dashboard
 - **日期（Date）**: 2026-07-30
 - **行驶距离（Driving Distance）**: 0 km
@@ -1392,7 +1402,7 @@ ICMCF Berlin 会议日程 (半天会议/海报展示，下午自由社交) (TODO
 - **停车场（Parking）**: 酒店停车场
 - **办理入住（Check-in）**: N/A
 - **办理退房（Check-out）**: N/A
-- **今日亮点（Highlights）**: 勃兰登堡门（Brandenburger Tor）、国会大厦前大草坪
+- **今日亮点（Highlights）**: 勃兰登堡门（Brandenburger Tor）、国会大厦参观（Bundestag Tour）
 
 ---
 
@@ -1403,9 +1413,11 @@ ICMCF Berlin 会议日程 (半天会议/海报展示，下午自由社交) (TODO
 11:30 | 找椅子给 Noora 吃辅食/午餐
 12:30 | Noora 婴儿车上午睡（妈妈在此期间读书/喝咖啡）
 15:00 | 前往周边的 Playground 游玩
-17:00 | 与爸爸碰面会合
-18:00 | 晚餐
-20:00 | Noora 睡觉时间
+16:15 | 与爸爸在国会大厦会合
+16:30 | 抵达国会大厦西门接待中心 (West Portal Welcome Centre)，准备安检 (需携 Photo ID)
+17:00 | 参加国会大厦英语导览游 (German Bundestag Guided Tour, 约 90 分钟)
+18:30 | 导览结束，直接前往国会大厦楼顶 Käfer 餐厅晚餐 (已预约)
+20:30 | 返回酒店，Noora 睡觉时间
 
 ---
 
