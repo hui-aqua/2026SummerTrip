@@ -81,6 +81,12 @@ Breakfast: 家中早餐
 Lunch: 途中服务区/餐厅
 Dinner: 自备简餐或 Søm Pizza 披萨外卖
 Coffee: 家中自制咖啡或 Espresso House Rona
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Rasmus Landspiseri** (Markens gate 8, Kristiansand): 本地高评分传统挪威餐厅，推荐鳕鱼和排骨。
+  - **Bønder i Byen** (Rådhusgata 16, Kristiansand): 农场直达风格的挪威本地特色料理，环境温馨。
+- **Chinese/Asian Food**:
+  - **Restaurant Østen** (Markens gate 45, Kristiansand): 位于市中心步行街，主打粤式及中式融合菜，对中国胃友好。
 
 ---
 

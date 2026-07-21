@@ -84,6 +84,12 @@ Breakfast: Color Line 轮渡早餐
 Lunch: 途中充电服务区午餐
 Dinner: Silkeborg 市区 Cafe Evald 德式/丹麦简餐
 Coffee: Color Line 轮渡上咖啡或 Silkeborg 咖啡馆
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Cafe Evald** (Papirfabrikken 10, Silkeborg): 坐落在运河边的纸厂旧址，提供高品质的丹麦三明治（Smørrebrød）及本地简餐。
+  - **Svostrup Kro** (Svostrupvej 58, Silkeborg): 运河畔极具历史感的古老丹麦客栈餐厅，主打传统丹麦经典菜肴。
+- **Chinese/Asian Food**:
+  - **Restaurant King Buffet** (Borgergade 12, Silkeborg): 经典的亚洲中式自助餐厅，提供寿司、热菜及蒙古铁板烧，分量充足。
 
 ---
 

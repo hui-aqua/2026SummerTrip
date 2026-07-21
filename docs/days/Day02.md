@@ -80,6 +80,11 @@ Breakfast: Airbnb 自备自做
 Lunch: TODO
 Dinner: Kristiansand 市中心餐馆 Rasmus 晚餐
 Coffee: 动物园内咖啡厅
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Sjøhuset** (Østre Strandgate 12a, Kristiansand): 位于 Fiskebrygga（鱼码头）附近，提供绝佳的海边景观以及当地新鲜捕捞的海鲜（如鳕鱼、青口贝和野生虾）。
+- **Chinese/Asian Food**:
+  - **Le’s Kitchen** (Kristian IVs gate 15, Kristiansand): 靠近市中心的中式/亚洲菜馆，家庭式温馨氛围，提供高性价比的中式炒面和炒饭。
 
 ---
 

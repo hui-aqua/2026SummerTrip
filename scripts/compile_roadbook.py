@@ -45,6 +45,58 @@ MAP_COORDS = {
     "Day13": {"name": "Danhostel Aalborg -> Hirtshals -> Home", "lat": 57.0543, "lon": 9.8863}
 }
 
+def parse_dashboard_to_grid(dashboard_text):
+    lines = dashboard_text.strip().split('\n')
+    items = []
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        # Match - **Key**: Value
+        match = re.match(r"^[-*]\s*\*\*(.*?)\*\*:\s*(.*)$", line)
+        if match:
+            key = match.group(1).strip()
+            value = match.group(2).strip()
+            items.append((key, value))
+            
+    icon_map = {
+        "日期": "📅", "Date": "📅",
+        "行驶距离": "🛣️", "Driving Distance": "🛣️",
+        "行驶时间": "⏱️", "Driving Time": "⏱️",
+        "预计剩余电量": "⚡", "Expected SOC": "⚡",
+        "天气": "☀️", "Weather": "☀️",
+        "步行距离": "🥾", "Walking Distance": "🥾",
+        "入住酒店": "🏨", "Hotel": "🏨",
+        "停车场": "🅿️", "Parking": "🅿️",
+        "办理入住": "🔑", "Check-in": "🔑",
+        "办理退房": "🚪", "Check-out": "🚪",
+        "今日亮点": "✨", "Highlights": "✨"
+    }
+    
+    grid_html = '<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 my-6">'
+    for key, value in items:
+        icon = "ℹ️"
+        for k, ic in icon_map.items():
+            if k in key:
+                icon = ic
+                break
+        
+        col_span = "col-span-1"
+        if "Hotel" in key or "Hotel" in value or "亮点" in key or "Highlights" in key or len(value) > 25:
+            col_span = "col-span-1 sm:col-span-2 md:col-span-4"
+            
+        grid_html += f"""
+        <div class="p-3 bg-slate-900/60 border border-slate-800 rounded-lg flex items-start gap-3 hover:border-sky-500/50 transition duration-200 {col_span}">
+            <div class="text-xl p-1.5 bg-slate-850 rounded-md select-none">{icon}</div>
+            <div>
+                <div class="text-xs font-semibold text-slate-400">{key}</div>
+                <div class="text-sm font-medium text-slate-200 mt-0.5 leading-snug">{value}</div>
+            </div>
+        </div>
+        """
+    grid_html += '</div>'
+    return grid_html
+
 def parse_markdown(text):
     # Very basic regex markdown parser to generate beautiful CSS blocks
     
@@ -75,9 +127,9 @@ def parse_markdown(text):
     text = re.sub(r"^&gt;\s*(.*?)(?=\n^[^&gt;]|\n\n|\n$|$)", parse_blockquote, text, flags=re.MULTILINE)
     
     # 3. Headings
-    text = re.sub(r"^# (.*?)$", r'<h1 class="text-3xl font-bold border-b border-slate-700 pb-2 my-4">\1</h1>', text, flags=re.MULTILINE)
-    text = re.sub(r"^## (.*?)$", r'<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">\1</h2>', text, flags=re.MULTILINE)
-    text = re.sub(r"^### (.*?)$", r'<h3 class="text-xl font-medium text-teal-300 mt-4 mb-2">\1</h3>', text, flags=re.MULTILINE)
+    text = re.sub(r"^# (.*?)$", r'<h1 class="text-2xl md:text-3xl font-bold border-b border-slate-700 pb-2 my-4">\1</h1>', text, flags=re.MULTILINE)
+    text = re.sub(r"^## (.*?)$", r'<h2 class="text-xl md:text-2xl font-semibold text-sky-400 mt-6 mb-3">\1</h2>', text, flags=re.MULTILINE)
+    text = re.sub(r"^### (.*?)$", r'<h3 class="text-lg md:text-xl font-medium text-teal-300 mt-4 mb-2">\1</h3>', text, flags=re.MULTILINE)
     
     # 4. Horizontal Rule
     text = re.sub(r"^---$", r'<hr class="my-6 border-slate-800" />', text, flags=re.MULTILINE)
@@ -101,7 +153,7 @@ def parse_markdown(text):
     def make_timeline_item(match):
         time_str = match.group(1)
         event_str = match.group(2)
-        return f'<div class="timeline-item flex gap-4 my-3"><div class="timeline-time font-mono text-cyan-400 font-bold">{time_str}</div><div class="timeline-dot"></div><div class="timeline-content text-slate-300">{event_str}</div></div>'
+        return f'<div class="timeline-item flex gap-4 my-3"><div class="timeline-time font-mono text-cyan-400 font-bold w-14 flex-shrink-0">{time_str}</div><div class="timeline-dot"></div><div class="timeline-content text-slate-300">{event_str}</div></div>'
     text = re.sub(timeline_pattern, make_timeline_item, text, flags=re.MULTILINE)
     
     # 7. Tables (Markdown tables)
@@ -128,7 +180,7 @@ def parse_markdown(text):
         table_html += '<thead class="bg-slate-900 text-slate-300 text-left font-bold">'
         table_html += '<tr>'
         for h, align in zip(headers, alignments):
-            table_html += f'<th class="px-4 py-3 border border-slate-800 text-{align}">{h}</th>'
+            table_html += f'<th class="px-3 py-2.5 md:px-4 md:py-3 border border-slate-800 text-{align}">{h}</th>'
         table_html += '</tr></thead>'
         
         table_html += '<tbody class="divide-y divide-slate-800 text-slate-400">'
@@ -136,7 +188,7 @@ def parse_markdown(text):
             cells = [c.strip() for c in r_line.split('|')[1:-1]]
             table_html += '<tr class="hover:bg-slate-900/40">'
             for cell, align in zip(cells, alignments):
-                table_html += f'<td class="px-4 py-3 border border-slate-800 text-{align}">{cell}</td>'
+                table_html += f'<td class="px-3 py-2.5 md:px-4 md:py-3 border border-slate-800 text-{align}">{cell}</td>'
             table_html += '</tr>'
         table_html += '</tbody></table></div>'
         return table_html
@@ -255,6 +307,19 @@ def build_roadbook_site():
             with open(day_path, 'r', encoding='utf-8') as f:
                 raw_text = f.read()
                 
+            # Extract Dashboard and replace with custom grid HTML placeholder
+            dashboard_match = re.search(r"## Dashboard\s*\n(.*?)(?=\n---|\n##)", raw_text, re.DOTALL)
+            grid_html = ""
+            if dashboard_match:
+                dashboard_content = dashboard_match.group(1)
+                grid_html = parse_dashboard_to_grid(dashboard_content)
+                raw_text = re.sub(
+                    r"## Dashboard\s*\n.*?(?=\n---|\n##)",
+                    "## 今日概览 (Dashboard)\n###DASHBOARD_GRID###\n",
+                    raw_text,
+                    flags=re.DOTALL
+                )
+
             # Render special interactive map container under the Map section of markdown
             map_container = f'## 今日地图 (Interactive Map)\n<div id="map-{day_key}" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>'
             raw_text = re.sub(
@@ -266,11 +331,16 @@ def build_roadbook_site():
             
             day_content = parse_markdown(raw_text)
             
+            # Replace dashboard grid placeholder
+            if grid_html:
+                day_content = day_content.replace('<p class="text-slate-300 my-2 leading-relaxed">###DASHBOARD_GRID###</p>', grid_html)
+                day_content = day_content.replace('###DASHBOARD_GRID###', grid_html)
+            
             # Insert the raw, unescaped leaflet map container HTML right after the parsed heading
             map_div_html = f'\n<div id="map-{day_key}" class="leaflet-map-container h-[400px] w-full rounded-lg border border-slate-800 my-4 bg-slate-950"></div>\n'
             day_content = day_content.replace(
-                '<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>',
-                '<h2 class="text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>' + map_div_html
+                '<h2 class="text-xl md:text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>',
+                '<h2 class="text-xl md:text-2xl font-semibold text-sky-400 mt-6 mb-3">今日地图 (Interactive Map)</h2>' + map_div_html
             )
             content_html.append(f'<div id="section-day{day_num}" class="roadbook-section day-section" data-day="{day_key}">{day_content}</div>')
             
@@ -318,7 +388,7 @@ def build_roadbook_site():
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Family Roadbook 2026 Europe - 欧洲家庭自驾手册</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -372,12 +442,17 @@ def build_roadbook_site():
             to { opacity: 1; transform: translateY(0); }
         }
         .leaflet-map-container {
-            height: 400px !important;
+            height: 320px !important;
             width: 100% !important;
             border-radius: 0.5rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
             z-index: 10;
+        }
+        @media (min-width: 768px) {
+            .leaflet-map-container {
+                height: 450px !important;
+            }
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -473,7 +548,7 @@ def build_roadbook_site():
         .timeline-item::after {
             content: "";
             position: absolute;
-            left: 4.05rem;
+            left: 4.875rem;
             top: 1rem;
             bottom: -1.5rem;
             width: 2px;
@@ -482,6 +557,165 @@ def build_roadbook_site():
         }
         .timeline-item:last-child::after {
             display: none;
+        }
+        /* Light Theme overrides */
+        .theme-light body {
+            background-color: #f8fafc !important;
+            color: #1e293b !important;
+        }
+        .theme-light .sidebar {
+            background-color: #f1f5f9 !important;
+            border-right: 1px solid #cbd5e1 !important;
+        }
+        .theme-light .nav-header {
+            color: #64748b !important;
+        }
+        .theme-light .nav-item {
+            color: #475569 !important;
+        }
+        .theme-light .nav-item:hover {
+            color: #0f172a !important;
+            background-color: #cbd5e1 !important;
+        }
+        .theme-light .nav-item.active {
+            color: #0284c7 !important;
+            background-color: #cbd5e1 !important;
+            border-left: 3px solid #0284c7 !important;
+        }
+        .theme-light h1 {
+            color: #0f172a !important;
+            border-bottom-color: #cbd5e1 !important;
+        }
+        .theme-light h2 {
+            color: #0369a1 !important;
+        }
+        .theme-light h3 {
+            color: #0f766e !important;
+        }
+        .theme-light hr {
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light p, .theme-light li {
+            color: #334155 !important;
+        }
+        .theme-light strong {
+            color: #0f172a !important;
+        }
+        .theme-light em {
+            color: #475569 !important;
+        }
+        .theme-light input[type="text"] {
+            background-color: #ffffff !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+        }
+        .theme-light input[type="text"]:focus {
+            border-color: #0284c7 !important;
+        }
+        .theme-light .bg-slate-900\\/60 {
+            background-color: rgba(241, 245, 249, 0.8) !important;
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light .bg-slate-900\\/60:hover {
+            border-color: #38bdf8 !important;
+        }
+        .theme-light .bg-slate-850 {
+            background-color: #cbd5e1 !important;
+        }
+        .theme-light .text-slate-400 {
+            color: #64748b !important;
+        }
+        .theme-light .text-slate-200 {
+            color: #1e293b !important;
+        }
+        .theme-light .text-slate-300 {
+            color: #334155 !important;
+        }
+        .theme-light .timeline-time {
+            color: #0284c7 !important;
+        }
+        .theme-light .timeline-dot {
+            background-color: #0284c7 !important;
+        }
+        .theme-light .timeline-item::after {
+            background-color: #cbd5e1 !important;
+        }
+        .theme-light .timeline-content {
+            color: #334155 !important;
+        }
+        .theme-light .alert-note {
+            background-color: rgba(56, 189, 248, 0.1) !important;
+        }
+        .theme-light .alert-important {
+            background-color: rgba(239, 68, 68, 0.1) !important;
+        }
+        .theme-light .alert-warning {
+            background-color: rgba(245, 158, 11, 0.1) !important;
+        }
+        .theme-light .alert-tip {
+            background-color: rgba(16, 185, 129, 0.1) !important;
+        }
+        .theme-light .roadbook-checkbox {
+            background-color: #ffffff !important;
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light .roadbook-checkbox:checked {
+            background-color: #10b981 !important;
+            border-color: #10b981 !important;
+        }
+        .theme-light .roadbook-checkbox:checked + label {
+            color: #94a3b8 !important;
+        }
+        .theme-light table {
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light thead {
+            background-color: #f1f5f9 !important;
+            color: #334155 !important;
+        }
+        .theme-light th, .theme-light td {
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light tr:hover {
+            background-color: rgba(241, 245, 249, 0.6) !important;
+        }
+        .theme-light td {
+            color: #334155 !important;
+        }
+        .theme-light pre, .theme-light .mermaid-diagram {
+            background-color: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+            color: #334155 !important;
+        }
+        .theme-light header {
+            background-color: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light header span {
+            color: #0f172a !important;
+        }
+        .theme-light #sync-status {
+            color: #64748b !important;
+        }
+        .theme-light .bg-slate-900\\/40 {
+            background-color: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light #search-results-section {
+            background-color: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light #search-results-section h2 {
+            color: #0284c7 !important;
+        }
+        .theme-light #search-results-list div:hover {
+            background-color: #e2e8f0 !important;
+        }
+        .theme-light #custom-items-container div {
+            border-color: #cbd5e1 !important;
+        }
+        .theme-light #custom-items-container label {
+            color: #334155 !important;
         }
         
         /* Print styling */
@@ -513,6 +747,10 @@ def build_roadbook_site():
         <span class="text-white font-bold title-font text-lg">🚗 Family Roadbook 2026</span>
         <div class="flex items-center gap-3">
             <span id="mobile-sync-dot" class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <!-- Mobile Theme Toggle -->
+            <button onclick="toggleTheme()" class="text-slate-300 hover:text-white focus:outline-none p-1 bg-slate-800/80 border border-slate-700/60 rounded flex items-center justify-center text-sm w-8 h-8">
+                <span id="mobile-theme-btn-icon">☀️</span>
+            </button>
             <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -521,8 +759,11 @@ def build_roadbook_site():
         </div>
     </header>
 
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div id="sidebar-overlay" class="no-print fixed inset-0 bg-black/60 z-30 hidden transition-opacity duration-300 opacity-0" onclick="toggleSidebar(false)"></div>
+
     <!-- Sidebar Navigation -->
-    <aside id="sidebar" class="no-print sidebar w-full md:w-80 flex-shrink-0 flex flex-col h-screen overflow-y-auto sticky top-0 hidden md:flex p-4 z-40">
+    <aside id="sidebar" class="no-print sidebar fixed inset-y-0 right-0 z-40 w-80 max-w-[85vw] bg-slate-900/98 backdrop-blur-md border-l border-slate-800 shadow-2xl flex flex-col h-screen overflow-y-auto transform translate-x-full md:translate-x-0 md:static md:w-80 md:border-r md:border-l-0 md:bg-slate-900 md:flex transition-transform duration-300 ease-in-out p-4">
         <div class="mb-6 px-3">
             <h1 class="text-white font-bold text-lg title-font">Family Roadbook 2026</h1>
             <p class="text-slate-500 text-xs mt-1">2024 Hyundai Kona EV Europe自驾手册</p>
@@ -542,7 +783,10 @@ def build_roadbook_site():
         </nav>
         
         <!-- Actions -->
-        <div class="mt-6 pt-4 border-t border-slate-800 flex gap-2">
+        <div class="mt-6 pt-4 border-t border-slate-800 flex flex-col gap-2">
+            <button onclick="toggleTheme()" class="w-full text-center py-2 px-3 bg-slate-850 hover:bg-slate-800 text-slate-300 hover:text-white rounded-md text-xs transition font-semibold flex items-center justify-center gap-2">
+                <span id="theme-btn-icon">☀️</span> <span id="theme-btn-text">日光模式 (Daylight)</span>
+            </button>
             <button onclick="window.print()" class="w-full text-center py-2 px-3 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-md text-xs transition font-semibold">
                 🖨️ 打印/生成PDF
             </button>
@@ -550,7 +794,7 @@ def build_roadbook_site():
     </aside>
 
     <!-- Main Content Area -->
-    <main id="main-content" class="flex-grow p-6 md:p-12 max-w-4xl mx-auto overflow-y-auto">
+    <main id="main-content" class="flex-grow w-full max-w-4xl mx-auto px-4 py-6 md:px-12 md:py-10 overflow-y-auto">
         <!-- Search Results (hidden by default) -->
         <div id="search-results-section" class="hidden my-4 bg-slate-900/40 border border-slate-800 rounded-lg p-6">
             <h2 class="text-xl font-bold text-sky-400 mb-4">🔍 搜索结果</h2>
@@ -601,10 +845,15 @@ def build_roadbook_site():
             const map = L.map(containerId).setView([lat, lon], 14);
             activeMaps[dayKey] = map;
             
-            // Add OpenStreetMap Tile Layer (beautiful dark themed map if available, else standard)
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; OpenStreetMap &copy; CARTO'
-            }).addTo(map);
+            // Add OpenStreetMap Tile Layer (beautiful themed map)
+            const isLight = document.documentElement.classList.contains('theme-light');
+            const tileLayer = L.tileLayer(
+                isLight 
+                ? 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
+                : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+                { attribution: '&copy; OpenStreetMap &copy; CARTO' }
+            ).addTo(map);
+            map.tileLayer = tileLayer;
             
             // Add Hotel Marker
             L.marker([lat, lon], {icon: icons.hotel})
@@ -682,8 +931,7 @@ def build_roadbook_site():
             });
             
             // Close mobile menu
-            document.getElementById('sidebar').classList.add('hidden');
-            document.getElementById('sidebar').classList.remove('flex', 'absolute', 'inset-0');
+            toggleSidebar(false);
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -886,18 +1134,85 @@ def build_roadbook_site():
             // Connect to Cloud Sync
             fetchState();
             setInterval(fetchState, 15000); // Poll every 15 seconds
+            
+            // Initialize Theme
+            const savedTheme = localStorage.getItem('roadbook_theme');
+            const systemPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            const isLight = savedTheme === 'light' || (!savedTheme && systemPrefersLight);
+            updateThemeUI(isLight);
         });
 
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', () => {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.classList.contains('hidden')) {
-                sidebar.classList.remove('hidden');
-                sidebar.classList.add('flex', 'absolute', 'inset-0');
+        // Theme switching logic
+        window.toggleTheme = function() {
+            const html = document.documentElement;
+            const isLight = html.classList.toggle('theme-light');
+            localStorage.setItem('roadbook_theme', isLight ? 'light' : 'dark');
+            updateThemeUI(isLight);
+        };
+
+        window.updateThemeUI = function(isLight) {
+            const html = document.documentElement;
+            const desktopIcon = document.getElementById('theme-btn-icon');
+            const desktopText = document.getElementById('theme-btn-text');
+            const mobileIcon = document.getElementById('mobile-theme-btn-icon');
+            
+            if (isLight) {
+                html.classList.add('theme-light');
+                if (desktopIcon) desktopIcon.innerText = '🌙';
+                if (desktopText) desktopText.innerText = '黑夜模式 (Night)';
+                if (mobileIcon) mobileIcon.innerText = '🌙';
             } else {
-                sidebar.classList.add('hidden');
-                sidebar.classList.remove('flex', 'absolute', 'inset-0');
+                html.classList.remove('theme-light');
+                if (desktopIcon) desktopIcon.innerText = '☀️';
+                if (desktopText) desktopText.innerText = '日光模式 (Daylight)';
+                if (mobileIcon) mobileIcon.innerText = '☀️';
             }
+            updateMapThemes();
+        };
+
+        window.updateMapThemes = function() {
+            const isLight = document.documentElement.classList.contains('theme-light');
+            const tileUrl = isLight 
+                ? 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
+                : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+                
+            for (const dayKey in activeMaps) {
+                const map = activeMaps[dayKey];
+                if (map && map.tileLayer) {
+                    map.tileLayer.setUrl(tileUrl);
+                }
+            }
+        };
+
+        // Toggle Mobile Sidebar
+        window.toggleSidebar = function(isOpen) {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (!sidebar) return;
+            
+            if (isOpen === undefined) {
+                isOpen = sidebar.classList.contains('translate-x-full');
+            }
+            
+            if (isOpen) {
+                sidebar.classList.remove('translate-x-full');
+                if (overlay) {
+                    overlay.classList.remove('hidden');
+                    setTimeout(() => overlay.classList.add('opacity-100'), 10);
+                }
+            } else {
+                sidebar.classList.add('translate-x-full');
+                if (overlay) {
+                    overlay.classList.remove('opacity-100');
+                    setTimeout(() => overlay.classList.add('hidden'), 300);
+                }
+            }
+        };
+
+        // Mobile menu toggle click
+        document.getElementById('menu-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleSidebar();
         });
         
         // Search Content

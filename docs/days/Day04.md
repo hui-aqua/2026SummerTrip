@@ -80,6 +80,12 @@ Breakfast: Airbnb 自制早餐
 Lunch: 边境充电服务区
 Dinner: 酒店 Campino's 餐厅或吕贝克老城区地道餐馆
 Coffee: 老城区 Niederegger Cafe 咖啡与杏仁糖甜点
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Schiffergesellschaft** (Breite Str. 2, Lübeck): 吕贝克最著名的历史地标级餐厅，始于16世纪，提供正宗北德水手风味（如鲱鱼、煎鱼和北德炖肉）。
+  - **Fangfrisch** (An der Untertrave 51, Lübeck): 运河旁的现代鱼类小馆，食材非常新鲜，主打各类本地煎鱼和海鲜三明治。
+- **Chinese/Asian Food**:
+  - **Shanghai-Restaurant** (Koberg 6, Lübeck): 开业于 1966 年，是吕贝克历史最悠久的中餐厅，口味正宗，环境雅致。
 
 ---
 

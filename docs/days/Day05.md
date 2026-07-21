@@ -80,6 +80,11 @@ Breakfast: 酒店早餐
 Lunch: 途中服务区
 Dinner: 酒店周边 Ristorante A Mano 意式餐厅 柏林中餐厅或西餐厅
 Coffee: Espresso House Friedrichstraße
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Schnitzelei Mitte** (Chausseestraße 8, Berlin Mitte): 提供高品质的德式大炸猪排（Wiener Schnitzel）以及德式传统冷盘小吃，环境现代舒适。
+- **Chinese/Asian Food**:
+  - **LIU Chengdu Weidao (刘成都味道)** (Kronenstraße 72, Berlin Mitte): 距离入住酒店很近，主打正宗四川担担面、红油抄手及小吃，味道惊艳。
 
 ---
 

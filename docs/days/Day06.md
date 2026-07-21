@@ -79,6 +79,11 @@ Breakfast: 酒店早餐
 Lunch: TODO
 Dinner: Checkpoint Charlie 附近德式猪肘餐馆
 Coffee: 柏林动物园内咖啡厅
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Max und Moritz** (Oranienstraße 162, Berlin Kreuzberg): 始于 1902 年的百年老店，原汁原味的旧柏林酒馆风格，提供经典德式肉丸（Königsberger Klopse）和脆皮烤猪肘。
+- **Chinese/Asian Food**:
+  - **Wen Cheng Handpulled Noodles (温城大面)** (Tempelhofer Ufer 36, Berlin Kreuzberg): 柏林爆火的手拉裤带面，配以香辣泼油，非常适合带娃在 Kreuzberg 活动后前往。
 
 ---
 

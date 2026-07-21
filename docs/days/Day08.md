@@ -79,6 +79,11 @@ Breakfast: 酒店早餐
 Lunch: 博物馆岛附近德餐或意大利面
 Dinner: 酒店附近中餐馆 (如大明酒家)
 Coffee: Five Elephant Mitte 咖啡与芝士蛋糕
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Trio** (Linienstraße 208, Berlin Mitte): 本地极高评分的现代德餐馆，提供精致的传统德式丸子和季节性北德菜，需要提前预订。
+- **Chinese/Asian Food**:
+  - **Sanku Maots’ai (三库冒菜)** (Mitte / 附近): 特色四川自选冒菜和手擀面，汤底香辣浓郁，适合自由度较高的学术休会日尝鲜。
 
 ---
 

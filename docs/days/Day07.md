@@ -79,6 +79,11 @@ Breakfast: 酒店早餐
 Lunch: 动物园亲子餐厅
 Dinner: 博物馆岛附近特色融合菜餐厅
 Coffee: The Barn Cafe (精品咖啡)
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Brauhaus Georgsbräu** (Spreeufer 4, Berlin Mitte): 位于历史悠久的 Nikolaiviertel（尼古拉小区），主打自酿淡啤酒以及超大份的传统巴伐利亚烤猪肘。
+- **Chinese/Asian Food**:
+  - **Ming Dynastie (大明酒家 - 施普雷河店)** (Brückenstraße 6, Berlin Mitte): 就在施普雷河畔，主打经典川菜和广式点心，分量足且座位宽敞，适合全家聚餐。
 
 ---
 

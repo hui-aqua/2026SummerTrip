@@ -75,6 +75,10 @@ Breakfast: 快速便当/船上早餐
 Lunch: Fjord Line 轮渡自助/餐厅
 Dinner: 回家自制晚餐
 Coffee: N/A
+### 推荐餐厅 (Recommended Restaurants)
+- **Local/Ferry Food**:
+  - **Fjord Line 船上自助餐厅**: 提供丰盛的斯堪的纳维亚海鲜自助、肉食及甜点。
+  - **Stavanger Home**: 回家享用自制温馨晚餐。
 
 ---
 

@@ -81,6 +81,12 @@ Breakfast: 酒店内
 Lunch: 途中丹麦超充服务区
 Dinner: Aalborg 游艇码头 Restaurant Marina 丹麦特色海鲜
 Coffee: Vestre Fjordpark 湖畔咖啡座
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Mortens Kro** (Mølleå 4, Aalborg): 奥尔堡极富盛名的精品北欧餐厅，主打精致的海鲜冷盘和创意丹麦料理。
+  - **Restaurant Fusion** (Slotspladsen 4, Aalborg): 坐落在奥尔堡港口旁，将本地新鲜海产与日式/亚洲料理技术完美结合的融合餐厅。
+- **Chinese/Asian Food**:
+  - **Guangzhou Dimsum Restaurant (广州酒家)** (Danmarksgade 41, Aalborg): 提供非常地道纯正的粤式点心（烧麦、虾饺、肠粉），非常适合抚慰旅途尾声的中国胃。
 
 ---
 

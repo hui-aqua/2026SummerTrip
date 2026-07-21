@@ -78,6 +78,11 @@ Breakfast: 酒店早餐
 Lunch: TODO
 Dinner: Conference Dinner (大会晚宴/自备替代方案)
 Coffee: 酒店周边咖啡馆
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Clärchens Ballhaus** (Auguststraße 24, Berlin Mitte): 拥有百年历史的跳舞大厅餐厅，庭院优美，提供经典柏林炸猪排与本地啤酒。
+- **Chinese/Asian Food**:
+  - **Long March Canteen (长征食堂)** (Wrangelstraße 20, Berlin Kreuzberg): 极具设计感的现代中式点心店，主打精致粤式蒸点和中式鸡尾酒，氛围高级。
 
 ---
 

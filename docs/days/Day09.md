@@ -79,6 +79,11 @@ Breakfast: 酒店内
 Lunch: 勃兰登堡门周边简餐/自备便当
 Dinner: 国会大厦楼顶 Käfer 餐厅 (需提前预订)
 Coffee: Einstein Kaffee (国会大厦周边)
+### 推荐餐厅 (Recommended Restaurants)
+- **Local Food**:
+  - **Käfer Dachgarten-Restaurant** (Platz der Republik 1, Berlin): 位于国会大厦圆顶顶楼，提供精致的现代德餐。可以一边俯瞰柏林全景一边享用本地食材制作的美食（需提前预约及安检）。
+- **Chinese/Asian Food**:
+  - **Peking Ente Berlin (北京烤鸭店)** (Voßstraße 1, Berlin Mitte): 靠近勃兰登堡门和波茨坦广场，主打正宗挂炉北京烤鸭，不需提前一天预定即可享用。
 
 ---
 
