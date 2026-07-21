@@ -37,3 +37,9 @@ Hui Cheng 参会，杨倩带 Noora 在周边进行亲子游玩，傍晚或半天
 ### 柏林公共交通建议 (U-Bahn / S-Bahn)
 - **购票建议**：建议购买柏林 AB 区的 24小时票（24-Hour Ticket）或 4-Day WelcomeCard，幼儿（6岁以下）免费乘车。
 - **无障碍通道**：柏林绝大多数地铁站配备升降电梯（Fahrstuhl），推婴儿车出行非常友好。可在 App "VBB Bus & Bahn" 或 "BVG" 中开启“无障碍（Barrier-free）”路线搜索。
+
+## 购物与生活补给 (Shopping & Supplies)
+
+- **Go Asia (东方超市 - Mall of Berlin店)**：Leipziger Pl. 12, 10117 Berlin. 位于 Mall of Berlin 地下一层，是柏林市区内非常大的亚洲超市。非常适合在离开柏林前采购中式调料、零食、方便食品及 Noora 所需的中式食材，为北上回程做好充分储备。
+- **Mall of Berlin 购物中心**：Leipziger Pl. 12, 10117 Berlin. 包含海量时尚品牌，配备极其舒适和干净的母婴室（Wickelraum），是雨天推车逛街的最佳去处。
+- **Wolt Market (Markgrafenstraße 58)**：距离酒店仅 100 米，可直接通过 Wolt App 下单配送或步行采购日常食物、牛奶和婴儿尿不湿。

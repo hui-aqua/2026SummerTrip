@@ -27,16 +27,17 @@
 09:30 | 驱车北上（Berlin → Neumünster）
 12:30 | 途中高速服务区充电 + 午餐 + Noora 车上午睡
 14:30 | 抵达 Neumünster Hotel，办理 Check-in 稍作安顿
-15:30 | 前往 McArthurGlen Designer Outlet Neumünster，推婴儿车漫步，适度购物
-18:00 | 奥特莱斯内或周边家庭餐厅晚餐
+15:30 | 驱车前往 Designer Outlet Neumünster (Oderstraße 10)，接入 Tesla Supercharger 边充电边陪孩子推车购物
+18:00 | 奥特莱斯内晚餐 (如 Outlet 内部的特色餐厅，或者自备便当)
+19:30 | 充电完毕并结束购物，驱车返回酒店
 20:00 | Noora 睡觉时间
 
 ---
 
 ## Route
 驾车路线（Driving route）：Berlin → A24 → A1 → Hamburg → A7 → Neumünster (Max-Johannsen-Brücke 1)
-步行路线：TODO 酒店至 Outlet 步行/自驾路线
-停车（Parking）：酒店停车场及 Outlet 大排停车场 (TODO)
+自驾与停车路线：酒店至 Designer Outlet Neumünster (Oderstraße 10) 约 7.5 km，车程约 10 分钟。
+停车（Parking）：Outlet 拥有超大型停车场，收费低廉，并设有 Tesla Supercharger 充电车位及残疾人/婴儿推车友好停车区。
 
 ---
 
@@ -55,9 +56,9 @@ graph TD
 
 ## Charging
 Departure SOC: 90%+
-Recommended charger: 途中 Hamburg 附近的 Tesla/IONITY 超充站 (TODO)
-Backup charger: Tesla Supercharger Neumünster (Oderstraße 10)
-Arrival SOC: 30%
+Recommended charger: **Tesla Supercharger Neumünster** (Oderstraße 10, 24539 Neumünster - 位于 Designer Outlet 停车场内，可边买东西边完成 Kona EV 的高功率补电)
+Backup charger: 途中 Hamburg 附近的 IONITY/Recharge 充电站
+Arrival SOC: 75% (包含充电后电量)
 
 ---
 
@@ -91,9 +92,9 @@ Coffee: Designer Outlet 购物区内星巴克/咖啡厅
 Milk: 定时喂奶
 Snack: 磨牙饼干、果泥
 Nap: 12:30 - 14:30 车上午睡
-Play: 奥特莱斯内的室外 Playground (带滑梯和爬网)
-Bath: 19:30
-Sleep: 20:00 准时入睡
+Play: Designer Outlet Neumünster 内部配备有超棒的室外 Playground (带滑梯和爬网)，且服务中心提供婴儿车 (Buggy) 租借服务
+Bath: 20:30 (回到酒店后洗澡)
+Sleep: 21:00 准时入睡
 
 ---
 

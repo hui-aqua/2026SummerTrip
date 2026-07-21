@@ -28,7 +28,7 @@
 12:20 | 爸爸参加闭幕与颁奖仪式，大会正式结束
 12:50 | 全家在酒店附近会合，享用柏林风味午餐
 14:00 | 回酒店让 Noora 在床上好好午睡，爸爸妈妈在房间整理打包行李
-16:30 | 下午去波茨坦广场 (Potsdamer Platz) 或 Mall of Berlin 逛街，采购礼品
+16:30 | 下午去波茨坦广场 (Potsdamer Platz) 与 Mall of Berlin 逛街，采购礼品并在 Go Asia (东方超市) 进行中式食材与零食大采购，为回程做储备
 18:00 | 晚餐 (享受在柏林的最后一晚，推荐 Clärchens Ballhaus 德餐或 Long March Canteen)
 20:00 | 返回酒店，Noora 睡觉时间
 
